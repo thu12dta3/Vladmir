@@ -1,0 +1,13 @@
+[Unit]
+Description=Vladmir voice assistant
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/vladmir
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=240
+
+[Install]
+WantedBy=default.target

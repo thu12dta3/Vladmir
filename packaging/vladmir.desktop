@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Vladmir
+Comment=Assistente pessoal multimodal local
+Exec=vladmir-desktop
+Icon=vladmir
+Terminal=false
+Categories=Utility;

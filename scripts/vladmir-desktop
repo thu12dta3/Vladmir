@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+VLADMIR_SCRIPT="$(readlink -f "${BASH_SOURCE[0]}")"
+VLADMIR_ROOT="$(cd "$(dirname "$VLADMIR_SCRIPT")/.." && pwd)"
+if [[ ! -d "$VLADMIR_ROOT/src/mark" && -d "$HOME/.local/share/vladmir/source/src/mark" ]]; then VLADMIR_ROOT="$HOME/.local/share/vladmir/source"; fi
+VLADMIR_PYTHON="${VLADMIR_PYTHON:-$HOME/.local/share/vladmir/core-env/bin/python}"
+cd "$VLADMIR_ROOT"
+export PYTHONPATH="$VLADMIR_ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
+exec "$VLADMIR_PYTHON" -m mark.desktop "$@"
