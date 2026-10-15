@@ -44,6 +44,8 @@ O código-fonte dos aplicativos está em mobile-android/, vladmir-companion/ e v
 
 Os guias de uso, capacidades/arquitetura e limitações/roteiro de melhorias estão em [docs/](docs/README.md). Cada guia está disponível em Markdown, texto simples e PDF A4 preto e branco. A documentação descreve o código-fonte e diferencia recursos configuráveis, experimentais e dependentes de validação no dispositivo.
 
+O apêndice de [incidentes e evidências sanitizados](docs/INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md) apresenta exemplos históricos de testes e falhas do projeto relacionado MARK. Ele não é uma certificação independente do Vladmir; consulte as ressalvas de proveniência e escopo no próprio documento.
+
 ## Desenvolvimento
 
 O código Python fica em `src/mark/`, os testes automatizados existentes ficam em `tests/`, os utilitários de execução e verificação em `scripts/` e os clientes Android/Wear em `mobile-android/`, `vladmir-companion/` e `vladmir-wear/`. A suíte Python usa `unittest` e pode ser executada com:

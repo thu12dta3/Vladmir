@@ -1,0 +1,656 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5541 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 48 790 Tm
+(Incidentes e evid\352ncias de desenvolvimento \227 vers\343o sanitizada) Tj
+/F1 8.4 Tf
+1 0 0 1 48 770 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 758 Tm
+(Este ap\352ndice re\372ne exemplos reais de investiga\347\343o e valida\347\343o registrados durante o desenvolvimento) Tj
+/F1 8.4 Tf
+1 0 0 1 48 746 Tm
+(relacionado ao MARK. Ele complementa a apresenta\347\343o p\372blica do Vladmir com falhas, corre\347\365es e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 734 Tm
+(limites observados, sem publicar registros brutos.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 722 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 710 Tm
+(Proveni\352ncia e limites) Tj
+/F1 8.4 Tf
+1 0 0 1 48 698 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 686 Tm
+(* Os relatos foram derivados de relat\363rios internos do MARK, projeto relacionado e separado do) Tj
+/F1 8.4 Tf
+1 0 0 1 48 674 Tm
+(reposit\363rio p\372blico Vladmir.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 662 Tm
+(* Os resultados abaixo n\343o certificam o Vladmir atual, n\343o provam que cada componente tenha c\363digo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 650 Tm
+(id\352ntico e n\343o substituem valida\347\343o reproduz\355vel no reposit\363rio p\372blico.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 638 Tm
+(* Os registros originais incluem logs e informa\347\365es locais. Nenhum log, configura\347\343o, credencial,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 626 Tm
+(imagem original ou dump foi copiado para este documento.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 614 Tm
+(* Foram omitidos nomes de usu\341rio, emails, endere\347os de rede, dom\355nios privados, nomes Bluetooth,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 602 Tm
+(n\372meros de s\351rie, caminhos pessoais, chaves, tokens e identificadores de sess\343o/dispositivo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 590 Tm
+(* Nenhuma captura de tela do Recovery foi republicada; ela continha detalhes de aparelho e contexto.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 578 Tm
+(A evid\352ncia \351 descrita em texto agregado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 566 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 554 Tm
+(Caso 1 \227 revis\343o adversarial da API m\363vel) Tj
+/F1 8.4 Tf
+1 0 0 1 48 542 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 530 Tm
+(Per\355odo: 30/09/2026. Alvo: vers\343o de teste do MARK Mobile e uma c\363pia local da API do) Tj
+/F2 10.5 Tf
+1 0 0 1 48 515 Tm
+(MARK. Tipo:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 500 Tm
+(inspe\347\343o do APK/c\363digo e requisi\347\365es locais de laborat\363rio.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 488 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 476 Tm
+(O que aconteceu) Tj
+/F1 8.4 Tf
+1 0 0 1 48 464 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 452 Tm
+(A revis\343o encontrou problemas concretos na autoriza\347\343o de hist\363rico, na ordem de valida\347\343o de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 440 Tm
+(requisi\347\365es, no tratamento de campos malformados e nos limites de leitura de respostas. Em um caso) Tj
+/F1 8.4 Tf
+1 0 0 1 48 428 Tm
+(hist\363rico, um cliente legado autenticado ainda conseguia ler hist\363rico depois de uma op\347\343o de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 416 Tm
+(bloqueio ser ativada. Em outro, o servidor come\347ava a aguardar um corpo grande antes de negar uma) Tj
+/F1 8.4 Tf
+1 0 0 1 48 404 Tm
+(identidade sem sess\343o v\341lida. Esses resultados pertencem \340 vers\343o avaliada naquela campanha;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 392 Tm
+(credenciais e o conte\372do sentinela n\343o s\343o publicados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 380 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 368 Tm
+(Corre\347\343o e evid\352ncia registrada) Tj
+/F1 8.4 Tf
+1 0 0 1 48 356 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 344 Tm
+(* O bloqueio passou a ser verificado tamb\351m para clientes legados e antes da entrega de resposta em) Tj
+/F1 8.4 Tf
+1 0 0 1 48 332 Tm
+(andamento; o caso de regress\343o corrigido negou o hist\363rico.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 320 Tm
+(* A identidade passou a ser conferida antes de ler o corpo. O cen\341rio sem sess\343o recebeu rejei\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 308 Tm
+(imediata no teste local.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 296 Tm
+(* Tipos inv\341lidos, caracteres n\343o ASCII na autentica\347\343o e enquadramento amb\355guo de cabe\347alhos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 284 Tm
+(passaram a ser rejeitados com erro controlado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 272 Tm
+(* Leituras de respostas e PDFs escolhidos pelo usu\341rio receberam limites por tamanho real dos bytes.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 260 Tm
+(* O relat\363rio daquela campanha registrou 165 testes Python aprovados \(150 existentes e 15 cen\341rios) Tj
+/F1 8.4 Tf
+1 0 0 1 48 248 Tm
+(adversariais\) e mais de 950 requisi\347\365es nos cen\341rios de muta\347\343o, repeti\347\343o, pareamento e rota\347\343o de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 236 Tm
+(sess\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 224 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 212 Tm
+(O que n\343o foi demonstrado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 200 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 188 Tm
+(O celular n\343o estava conectado durante o teste de seguran\347a. Parte dos casos TLS foi exercitada com) Tj
+/F1 8.4 Tf
+1 0 0 1 48 176 Tm
+(uma classe Kotlin compilada em uma JVM e certificados de laborat\363rio; isso n\343o equivale a ataque) Tj
+/F1 8.4 Tf
+1 0 0 1 48 164 Tm
+(MITM contra o app instalado. N\343o houve teste de OOM f\355sico, revis\343o integral de todas as) Tj
+/F1 8.4 Tf
+1 0 0 1 48 152 Tm
+(depend\352ncias ou auditoria completa de APK. O relat\363rio original manteve o status SECURITY) Tj
+/F2 10.5 Tf
+1 0 0 1 48 140 Tm
+(INCOMPLETE.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 125 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 113 Tm
+(Fonte interna: relat\363rio de red team do MARK Mobile/API, datado de 30/09/2026. Os artefatos brutos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 101 Tm
+(permaneceram privados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 89 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 1/4) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5507 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(Caso 2 \227 recupera\347\343o ap\363s remover uma depend\352ncia do sistema do rel\363gio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(Per\355odo: 10/10/2026. Alvo: app Wear OS e servi\347os originais do fabricante em um rel\363gio de teste.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(Tipo: foto fornecida pelo propriet\341rio, logs de sistema obtidos em janela USB e observa\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(posterior.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(O que aconteceu) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(Depois que um pacote OEM de sa\372de foi removido durante uma limpeza solicitada, um servi\347o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(persistente do rel\363gio passou a falhar repetidamente porque n\343o encontrava um provedor de passos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+(fornecido por aquele pacote. O propriet\341rio observou a tela Android Recovery com a mensagem de que o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(sistema n\343o podia carregar. A rela\347\343o entre o crash loop e o Recovery era uma hip\363tese sustentada) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+(pelos logs e pelo mecanismo do Android, n\343o uma reconstru\347\343o perfeita de todo o hist\363rico do boot.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+(Recupera\347\343o e resultado observado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+(* O pacote OEM original foi restaurado para o usu\341rio principal; n\343o houve comando de factory reset,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(wipe, root ou altera\347\343o de parti\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(* Em amostras posteriores, o servi\347o voltou a encontrar o provedor e n\343o houve novas falhas Java) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(daquele servi\347o no buffer observado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(* Ap\363s rein\355cio normal, o rel\363gio voltou ao mostrador. A observa\347\343o mais longa registrada chegou a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+(aproximadamente 53 minutos na mesma inicializa\347\343o, sem novas falhas Java observadas do servi\347o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(investigado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+(Limites) Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+(Persistiram erros nativos sem causa isolada e instabilidade na janela de comunica\347\343o USB. O per\355odo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+(observado n\343o certifica estabilidade prolongada, GPS, sensores, configura\347\365es intactas nem aus\352ncia) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+(de outros defeitos. A conclus\343o pr\341tica foi preservar a depend\352ncia OEM at\351 existir alternativa) Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(comprovada.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+(Fonte interna: relat\363rio de recupera\347\343o do Companion/Wear, datado de 10/10/2026. Foto e dumps) Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(originais n\343o foram republicados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+(Caso 3 \227 m\372sica em mono ao iniciar chamadas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+(Per\355odo: 11/10/2026. Alvo: roteamento de \341udio de uma instala\347\343o Linux com fone Bluetooth e chamada.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+(Tipo: inspe\347\343o do estado do servidor de \341udio, configura\347\343o do servi\347o local e confirma\347\343o do) Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+(usu\341rio.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+(Diagn\363stico e corre\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+(O servi\347o de escuta seguia a entrada de microfone padr\343o. Quando um microfone separado n\343o estava) Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
+(dispon\355vel, o sistema usava o microfone do fone Bluetooth e mudava a conex\343o para o perfil de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 262 Tm
+(chamada HFP/mSBC, que naquele aparelho entregava \341udio de reprodu\347\343o mono. O player de m\372sica tamb\351m) Tj
+/F1 8.4 Tf
+1 0 0 1 48 250 Tm
+(estava saindo em mono.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 238 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 226 Tm
+(O ajuste daquela m\341quina separou o microfone da sa\355da do fone, manteve A2DP est\351reo como perfil de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 214 Tm
+(reprodu\347\343o e encaminhou os fluxos de m\372sica para dois canais a 48 kHz. O usu\341rio confirmou que a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 202 Tm
+(m\372sica voltou ao normal e o \341udio direcional est\351reo permaneceu.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 190 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 178 Tm
+(Limites) Tj
+/F1 8.4 Tf
+1 0 0 1 48 166 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 154 Tm
+(Essa foi uma corre\347\343o local de roteamento, n\343o uma mudan\347a universal do Vladmir. Com essa pol\355tica,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 142 Tm
+(o microfone do fone Bluetooth cl\341ssico n\343o \351 usado para a chamada; \351 necess\341rio outro microfone. O) Tj
+/F1 8.4 Tf
+1 0 0 1 48 130 Tm
+(teste n\343o garante comportamento id\352ntico em outras vers\365es de PipeWire, perfis Bluetooth ou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 118 Tm
+(headsets.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 106 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 94 Tm
+(Fonte interna: relat\363rio de \341udio est\351reo do MARK, datado de 11/10/2026. Configura\347\343o anterior e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 82 Tm
+(backups privados n\343o foram copiados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 70 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 2/4) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 5626 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(Caso 4 \227 c\342mera e reconhecimento visual em tempo real) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(Per\355odo: 11/10/2026. Alvo: captura local de c\342mera USB no desktop e modelo de vis\343o local j\341) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(instalado. Tipo: captura f\355sica, infer\352ncias locais e conjunto pequeno de imagens de avalia\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(Evid\352ncias registradas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(* Captura pontual de um quadro de 1280 \327 720 em cerca de 1,02 s naquela configura\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(* Em uma amostra de fluxo f\355sico, foram recebidos 195 quadros em aproximadamente 20 segundos; isso) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(mede captura, n\343o taxa de infer\352ncia da IA.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+(* Quatro imagens de teste conhecidas passaram tarefas visuais definidas pelos autores. Em outra) Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(compara\347\343o, quatro imagens passaram tanto com a cena inteira como com recorte; o recorte n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+(demonstrou ganho de precis\343o e elevou a lat\352ncia m\351dia medida de 1,52 s para 2,29 s.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(* A su\355te de regress\343o do MARK registrou 327 testes aprovados naquela etapa, incluindo cen\341rios de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+(valida\347\343o de imagem, concorr\352ncia e encerramento.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+(Limites) Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(O conjunto era pequeno, conhecido e n\343o cego; n\343o permite inferir precis\343o geral. A captura f\355sica) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(n\343o prova que a c\342mera funcione em outros computadores, sob baixa luz ou com fontes RTSP. Os) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(resultados de teste pertencem ao MARK e n\343o s\343o um benchmark independente do Vladmir.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(Fonte interna: relat\363rios de vis\343o ao vivo e foco do MARK, datados de 11/10/2026. Nenhuma foto real) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+(da c\342mera ou descri\347\343o de cena privada foi publicada.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+(Caso 5 \227 ajuste de modelo sem ganho demonstrado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+(Per\355odo: 11/10/2026. Alvo: experimento local de adaptadores QLoRA para um modelo base existente.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+(Tipo: treino isolado, compara\347\343o de respostas e relat\363rio agregado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(Resultado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(Dois candidatos completaram 14 atualiza\347\365es cada usando 56 exemplos de treino por rodada. O primeiro) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+(reduziu a loss, mas regrediu em respostas qualitativas e foi rejeitado. O segundo preservou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+(aproximadamente as respostas iniciais, sem ganho claro. Nenhum adaptador foi ativado; os modelos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+(base foram mantidos.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+(Limites) Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+(A avalia\347\343o era pequena e n\343o cega; c\342mera, voz, AR e seguran\347a ampla dos pesos n\343o foram avaliados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+(O resultado \351 evid\352ncia de que a rodada n\343o justificou trocar os modelos, n\343o prova de melhoria) Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+(geral ou de inexist\352ncia de outras oportunidades de treino.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
+(Fonte interna: relat\363rio de treino experimental do MARK, datado de 11/10/2026. Pesos, checkpoints e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 262 Tm
+(dataset permanecem locais e n\343o foram copiados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 250 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 238 Tm
+(Estado de recursos m\363veis que n\343o devem ser anunciados como conclu\355dos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 226 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 214 Tm
+(Um relat\363rio de teste do aplicativo Android registrou que o app abriu e a tela AR apareceu em um) Tj
+/F1 8.4 Tf
+1 0 0 1 48 202 Tm
+(aparelho; detec\347\343o f\355sica de planos, coloca\347\343o do objeto, nitidez da c\342mera e mapa persistente ainda) Tj
+/F1 8.4 Tf
+1 0 0 1 48 190 Tm
+(n\343o estavam comprovados. A AR n\343o guardava o mapa ao sair da sess\343o. Em paralelo, a ponte) Tj
+/F1 8.4 Tf
+1 0 0 1 48 178 Tm
+(Companion/Wear teve observa\347\343o de \223offline ao bloquear o telefone\224; vers\365es posteriores mantiveram) Tj
+/F1 8.4 Tf
+1 0 0 1 48 166 Tm
+(servi\347o em foreground numa sess\343o com tela apagada, mas a autoriza\347\343o tempor\341ria expirava e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 154 Tm
+(reconex\343o dur\341vel continuava pendente.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 142 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 130 Tm
+(Esses exemplos ilustram por que compilar um APK ou abrir uma tela n\343o deve ser descrito como prova) Tj
+/F1 8.4 Tf
+1 0 0 1 48 118 Tm
+(de funcionamento f\355sico completo. Os resultados s\343o hist\363ricos e devem ser conferidos novamente) Tj
+/F1 8.4 Tf
+1 0 0 1 48 106 Tm
+(antes de qualquer alega\347\343o sobre a vers\343o atual.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 94 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 82 Tm
+(Para transformar estes relatos em prova p\372blica reproduz\355vel) Tj
+/F1 8.4 Tf
+1 0 0 1 48 70 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 3/4) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 1096 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(1. Criar casos de teste sint\351ticos e seguros no reposit\363rio p\372blico, sem importar banco, token, dump) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(ou configura\347\343o privada do MARK.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(2. Publicar comandos e fixtures autorais com licen\347as claras; documentar vers\343o exata e hash do) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(c\363digo testado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(3. Adicionar CI no Vladmir e publicar o resultado real da execu\347\343o antes de usar badges ou afirmar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(que o pipeline est\341 verde.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(4. Repetir ensaios f\355sicos apenas com escopo e aparelho declarados, sem publicar n\372meros de s\351rie,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(contas, IPs ou conte\372do privado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(5. Manter expl\355cita a origem: resultados do MARK s\343o experi\352ncia de desenvolvimento relacionada, n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(certifica\347\343o independente do Vladmir.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 4/4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000238 00000 n 
+0000000340 00000 n 
+0000005933 00000 n 
+0000006069 00000 n 
+0000011628 00000 n 
+0000011764 00000 n 
+0000017442 00000 n 
+0000017579 00000 n 
+0000018728 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+18866
+%%EOF

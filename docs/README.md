@@ -9,6 +9,7 @@ Este conjunto descreve o estado do código-fonte publicado no Vladmir. A presen�
 | Guia de instalação e uso | [GUIA_DE_USO.md](GUIA_DE_USO.md) | [GUIA_DE_USO.txt](GUIA_DE_USO.txt) | [GUIA_DE_USO.pdf](pdf/GUIA_DE_USO.pdf) |
 | Capacidades e arquitetura | [CAPACIDADES_E_ARQUITETURA.md](CAPACIDADES_E_ARQUITETURA.md) | [CAPACIDADES_E_ARQUITETURA.txt](CAPACIDADES_E_ARQUITETURA.txt) | [CAPACIDADES_E_ARQUITETURA.pdf](pdf/CAPACIDADES_E_ARQUITETURA.pdf) |
 | Limitações e plano de melhorias | [LIMITACOES_E_MELHORIAS.md](LIMITACOES_E_MELHORIAS.md) | [LIMITACOES_E_MELHORIAS.txt](LIMITACOES_E_MELHORIAS.txt) | [LIMITACOES_E_MELHORIAS.pdf](pdf/LIMITACOES_E_MELHORIAS.pdf) |
+| Incidentes e evidências sanitizados | [INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md](INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md) | [INCIDENTES_E_EVIDENCIAS_SANITIZADOS.txt](INCIDENTES_E_EVIDENCIAS_SANITIZADOS.txt) | [INCIDENTES_E_EVIDENCIAS_SANITIZADOS.pdf](pdf/INCIDENTES_E_EVIDENCIAS_SANITIZADOS.pdf) |
 
 ## Como interpretar
 
@@ -22,3 +23,5 @@ Os documentos foram preparados por inspeção estática do repositório `main` e
 O código Python está em `src/mark/` e há suíte `unittest` em `tests/`; o projeto ainda não publica workflow de CI nem percentual de cobertura. A documentação de contribuição e governança está em [CONTRIBUTING.md](../CONTRIBUTING.md) e [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md). A estrutura e esses fatos foram conferidos no commit `d9b3358` antes desta atualização.
 
 Ainda não há workflow GitHub Actions; não há badge de build porque não existe execução de CI para reportar. Os arquivos de issue/PR ajudam a coletar relatos, mas não significam que há equipe de suporte ou SLA estabelecido.
+
+O apêndice de [incidentes e evidências sanitizados](INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md) deriva de relatórios internos do MARK e separa explicitamente esses registros da validação do Vladmir. Logs brutos, imagens originais, credenciais e configurações privadas não foram publicados.
