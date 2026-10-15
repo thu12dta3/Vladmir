@@ -40,6 +40,10 @@ O Vladmir usa Ollama em loopback por padrão. Instale somente um modelo que seu 
 
 O código-fonte dos aplicativos está em mobile-android/, vladmir-companion/ e vladmir-wear/. Abra mobile-android/ no Android Studio e compile as variantes desejadas. O vínculo requer aprovação explícita no Android e Bluetooth pareado; nenhum servidor remoto público vem embutido.
 
+## Documentação detalhada
+
+Os guias de uso, capacidades/arquitetura e limitações/roteiro de melhorias estão em [docs/](docs/README.md). Cada guia está disponível em Markdown, texto simples e PDF A4 preto e branco. A documentação descreve o código-fonte e diferencia recursos configuráveis, experimentais e dependentes de validação no dispositivo.
+
 ## Privacidade e segurança
 
 - Endereços de câmera, tokens, senhas, chaves e URLs privadas ficam em configuração local ignorada pelo Git.

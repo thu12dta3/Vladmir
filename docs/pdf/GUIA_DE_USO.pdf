@@ -1,0 +1,842 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4645 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 48 790 Tm
+(Guia completo de instala\347\343o e uso do Vladmir) Tj
+/F1 8.4 Tf
+1 0 0 1 48 770 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 758 Tm
+(Escopo: vers\343o do c\363digo-fonte no branch main, consultada em 14/10/2026. Os passos abaixo) Tj
+/F1 8 Tf
+1 0 0 1 48 746 Tm
+(n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 734 Tm
+(afirmam que o software foi instalado ou executado neste ambiente.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 722 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 710 Tm
+(1. O que \351 o Vladmir) Tj
+/F1 8.4 Tf
+1 0 0 1 48 698 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 686 Tm
+(Vladmir \351 um assistente local para Linux com aplicativo desktop, modelos servidos pelo Ollama,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 674 Tm
+(mem\363ria e agenda em arquivos locais e integra\347\365es opcionais. H\341 c\363digo separado para Android,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 662 Tm
+(Companion e Wear OS. Muitas fun\347\365es dependem de programas externos, permiss\365es, modelos e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 650 Tm
+(configura\347\343o. A instala\347\343o n\343o inclui pesos de IA, credenciais, APK pronto nem servidor remoto) Tj
+/F1 8.4 Tf
+1 0 0 1 48 638 Tm
+(configurado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 626 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 614 Tm
+(2. Requisitos b\341sicos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 602 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 590 Tm
+(* Linux e Python 3.11 ou superior.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 578 Tm
+(* Ollama instalado e iniciado em http://127.0.0.1:11434.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 566 Tm
+(* Um modelo de chat e, se desejado, um modelo de programa\347\343o j\341 baixados no Ollama.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 554 Tm
+(* Para abrir a interface desktop, PyQt6 e as depend\352ncias do requirements.txt.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 542 Tm
+(* Espa\347o para o ambiente Python, modelos e dados. O espa\347o ocupado pelos pesos depende dos modelos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 530 Tm
+(escolhidos.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 518 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 506 Tm
+(Recursos opcionais t\352m depend\352ncias pr\363prias: ffmpeg e PulseAudio/PipeWire para \341udio e c\342mera;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 494 Tm
+(Whisper e arquivos de modelo para transcri\347\343o; Piper e voz instalada para s\355ntese; ClamAV para) Tj
+/F1 8.4 Tf
+1 0 0 1 48 482 Tm
+(varredura; gh para a autentica\347\343o GitHub; Android Studio/SDK/JDK para compilar os apps; e servidor) Tj
+/F1 8.4 Tf
+1 0 0 1 48 470 Tm
+(MCP local habilitado dentro da IDE JetBrains.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 458 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 446 Tm
+(3. Instalar o desktop) Tj
+/F1 8.4 Tf
+1 0 0 1 48 434 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 422 Tm
+(O procedimento documentado no README instala o checkout e um ambiente virtual em sua pasta de) Tj
+/F2 10.5 Tf
+1 0 0 1 48 410 Tm
+(usu\341rio:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 395 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 383 Tm
+(bash) Tj
+/F1 8.4 Tf
+1 0 0 1 48 371 Tm
+(mkdir -p ~/.local/share/vladmir) Tj
+/F1 8.4 Tf
+1 0 0 1 48 359 Tm
+(git clone https://github.com/thu12dta3/Vladmir.git ~/.local/share/vladmir/source) Tj
+/F1 8.4 Tf
+1 0 0 1 48 347 Tm
+(cd ~/.local/share/vladmir/source) Tj
+/F1 8.4 Tf
+1 0 0 1 48 335 Tm
+(python -m venv ~/.local/share/vladmir/core-env) Tj
+/F1 8.4 Tf
+1 0 0 1 48 323 Tm
+(~/.local/share/vladmir/core-env/bin/pip install -r requirements.txt) Tj
+/F1 8.4 Tf
+1 0 0 1 48 311 Tm
+(install -Dm755 scripts/vladmir ~/.local/bin/vladmir) Tj
+/F1 8.4 Tf
+1 0 0 1 48 299 Tm
+(install -Dm755 scripts/vladmir-desktop ~/.local/bin/vladmir-desktop) Tj
+/F1 8.4 Tf
+1 0 0 1 48 287 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 275 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 263 Tm
+(O README tamb\351m cont\351m comandos para instalar \355cone e atalho do menu de aplicativos. Se ~/.local/bin) Tj
+/F1 8.4 Tf
+1 0 0 1 48 251 Tm
+(n\343o estiver no PATH, abra o aplicativo pelo caminho completo ou ajuste o PATH na sess\343o do usu\341rio.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 239 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 227 Tm
+(Antes de iniciar, consulte as verifica\347\365es e op\347\365es do projeto:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 212 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 200 Tm
+(bash) Tj
+/F1 8.4 Tf
+1 0 0 1 48 188 Tm
+(cd ~/.local/share/vladmir/source) Tj
+/F1 8.4 Tf
+1 0 0 1 48 176 Tm
+(./scripts/vladmir --check) Tj
+/F1 8.4 Tf
+1 0 0 1 48 164 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 152 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 140 Tm
+(Esse check consulta depend\352ncias, configura\347\365es e disponibilidade de modelos. Ele n\343o prova que uma) Tj
+/F1 8.4 Tf
+1 0 0 1 48 128 Tm
+(c\342mera desconectada funciona, que o \341udio sai no dispositivo correto ou que um telefone pareado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 116 Tm
+(responde.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 104 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 92 Tm
+(4. Configura\347\343o e modelos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 80 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 1/5) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5815 >>
+stream
+BT
+/F2 10.5 Tf
+1 0 0 1 48 790 Tm
+(Crie ~/.config/vladmir/config.json a partir de config/config.example.json e proteja o) Tj
+/F2 10.5 Tf
+1 0 0 1 48 775 Tm
+(arquivo:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 760 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 748 Tm
+(bash) Tj
+/F1 8.4 Tf
+1 0 0 1 48 736 Tm
+(mkdir -p ~/.config/vladmir) Tj
+/F1 8.4 Tf
+1 0 0 1 48 724 Tm
+(cp config/config.example.json ~/.config/vladmir/config.json) Tj
+/F1 8.4 Tf
+1 0 0 1 48 712 Tm
+(chmod 600 ~/.config/vladmir/config.json) Tj
+/F1 8.4 Tf
+1 0 0 1 48 700 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 688 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 676 Tm
+(Edite o JSON para escolher identificadores que existam no Ollama. A configura\347\343o de exemplo usa) Tj
+/F1 8.4 Tf
+1 0 0 1 48 664 Tm
+(qwen3-vl:4b para conversa e qwen2.5-coder:7b para programa\347\343o, mas a m\341quina precisa ter esses) Tj
+/F1 8.4 Tf
+1 0 0 1 48 652 Tm
+(modelos instalados. Vladmir n\343o baixa modelos sozinho. Confira os modelos locais com ollama list.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 640 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 628 Tm
+(O Ollama fica em loopback por padr\343o. keep_alive: 0 libera o modelo ap\363s o uso para poupar VRAM, com) Tj
+/F1 8.4 Tf
+1 0 0 1 48 616 Tm
+(o custo de carregar novamente na pr\363xima chamada. A primeira resposta pode demorar mais.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 604 Tm
+(VLADMIR_CONFIG seleciona outro arquivo; demais vari\341veis de configura\347\343o usam o prefixo VLADMIR_,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 592 Tm
+(como descrito em config/README.md. N\343o coloque tokens, senhas ou URLs privadas no Git.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 580 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 568 Tm
+(Inicie a interface com ./scripts/vladmir-desktop no checkout ou vladmir-desktop ap\363s instalar o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 556 Tm
+(launcher. O comando ./scripts/vladmir abre o modo de voz/terminal, conforme op\347\365es da ferramenta.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 544 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 532 Tm
+(5. Conversas, mem\363ria e modos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 520 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 508 Tm
+(* Geral: chat principal com seletor de modelo e n\355vel instant\342neo, m\351dio ou alto. O n\355vel ajusta) Tj
+/F1 8.4 Tf
+1 0 0 1 48 496 Tm
+(op\347\365es de gera\347\343o/contexto no caminho de chat; n\343o \351 uma garantia de que o modelo raciocina melhor.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 484 Tm
+(* Engenheiro: \341rea de programa\347\343o com conversas pr\363prias e ferramentas espec\355ficas. A) Tj
+/F1 8.4 Tf
+1 0 0 1 48 472 Tm
+(disponibilidade real depende do modelo local e das ferramentas habilitadas.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 460 Tm
+(* Professor: \341rea de estudo com conversas e apoio de materiais da biblioteca.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 448 Tm
+(* Mem\363ria coletiva: contexto e fatos podem ser compartilhados entre perfis/\341reas pelo armazenamento) Tj
+/F1 8.4 Tf
+1 0 0 1 48 436 Tm
+(local. A mem\363ria n\343o equivale a reter toda a conversa para sempre. O tamanho do hist\363rico enviado ao) Tj
+/F1 8.4 Tf
+1 0 0 1 48 424 Tm
+(modelo \351 limitado pela configura\347\343o e pelo contexto do modelo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 412 Tm
+(* Honcho: integra\347\343o opcional desativada por padr\343o. A configura\347\343o de exemplo mant\351m) Tj
+/F1 8.4 Tf
+1 0 0 1 48 400 Tm
+(share_conversations falso. Ativar servi\347o remoto pode enviar dados; configure deliberadamente e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 388 Tm
+(revise privacidade antes.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 376 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 364 Tm
+(O estado persistente fica em ~/.local/state/vladmir e ~/.local/share/vladmir. Fa\347a c\363pia segura) Tj
+/F1 8.4 Tf
+1 0 0 1 48 352 Tm
+(desses diret\363rios antes de migra\347\343o ou limpeza. A localiza\347\343o exata pode variar por vari\341vel XDG ou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 340 Tm
+(configura\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 328 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 316 Tm
+(6. Anexar arquivos e usar a biblioteca) Tj
+/F1 8.4 Tf
+1 0 0 1 48 304 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 292 Tm
+(O chat do desktop aceita um conjunto de documentos de texto/estrutura, PDF, DOCX e imagens. Os) Tj
+/F1 8.4 Tf
+1 0 0 1 48 280 Tm
+(limites atuais do chat s\343o 5 anexos, at\351 6 MiB por arquivo, 8 MiB somados, e extra\347\343o textual at\351) Tj
+/F1 8.4 Tf
+1 0 0 1 48 268 Tm
+(400.000 caracteres. A API m\363vel tamb\351m imp\365e limites de corpo e anexos. Portanto, arquivo de 1 GB) Tj
+/F1 8.4 Tf
+1 0 0 1 48 256 Tm
+(n\343o \351 suportado no chat.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 244 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 232 Tm
+(A Biblioteca \351 outro fluxo: importa e indexa refer\352ncias para consulta posterior. H\341 extratores para) Tj
+/F1 8.4 Tf
+1 0 0 1 48 220 Tm
+(documentos, planilhas, apresenta\347\365es, ebooks, dados estruturados, texto e muitos formatos de c\363digo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 208 Tm
+(Limites relevantes do extrator incluem 64 MiB de entrada, 32 MiB de conte\372do expandido de arquivo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 196 Tm
+(compactado e 2 milh\365es de caracteres extra\355dos. Arquivos n\343o reconhecidos podem virar refer\352ncia de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 184 Tm
+(metadados ou texto bruto; isso n\343o significa compreens\343o sem\342ntica do formato.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 172 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 160 Tm
+(Para importar: abra Biblioteca, selecione arquivos e acompanhe o estado da fila. Evite importar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 148 Tm
+(c\363pias enormes de diret\363rios, arquivos execut\341veis desconhecidos ou dados privados sem necessidade.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 136 Tm
+(PDFs digitalizados dependem de OCR instalado; \341udio/v\355deo depende de ferramentas locais e a extra\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 124 Tm
+(\351 parcial. A biblioteca n\343o treina automaticamente o modelo com os documentos.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 112 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 100 Tm
+(7. Voz, chamada e \341udio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 88 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 2/5) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6060 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(O caminho de voz no PC captura \341udio mono a 16 kHz, aplica detec\347\343o de fala e usa Whisper para) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(transcri\347\343o. Para resposta falada, usa Piper e uma alternativa local quando dispon\355vel. O sistema) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(escolhe a fonte e sa\355da PulseAudio/PipeWire configuradas. A chamada no aplicativo processa turnos de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(\341udio; n\343o \351 um canal telef\364nico de lat\352ncia garantida nem uma sess\343o de fala duplex de ponta a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(ponta.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 718 Tm
+(Como usar:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 703 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 691 Tm
+(1. Instale/configure o dispositivo de entrada e sa\355da no sistema.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 679 Tm
+(2. Configure os bin\341rios e modelos Whisper/Piper conforme config/config.example.json.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 667 Tm
+(3. Use Chamada ou a ferramenta de voz e conceda acesso ao microfone quando o sistema pedir.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 655 Tm
+(4. Confira a fonte e a sa\355da no seletor de \341udio do desktop se a m\372sica ou voz sair no dispositivo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 643 Tm
+(errado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 631 Tm
+(5. Encerre a chamada para parar a captura do microfone.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 619 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 607 Tm
+(Diagn\363stico inicial: pactl list short sources, pactl list short sinks, pactl get-default-source e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 595 Tm
+(pactl get-default-sink. Uma chamada Bluetooth pode fazer o sistema trocar o perfil do fone para) Tj
+/F1 8.4 Tf
+1 0 0 1 48 583 Tm
+(HFP/HSP; esse perfil reduz a qualidade de reprodu\347\343o. Escolher uma entrada separada e manter A2DP) Tj
+/F1 8.4 Tf
+1 0 0 1 48 571 Tm
+(est\351reo depende dos perfis e do servidor de \341udio local.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 559 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 547 Tm
+(8. C\342mera e vis\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 535 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 523 Tm
+(No desktop, Vladmir pode capturar uma imagem de c\342mera USB ou um frame de fonte RTSP/RTSPS) Tj
+/F1 8.4 Tf
+1 0 0 1 48 511 Tm
+(configurada e enviar a imagem ao modelo de vis\343o local. A vis\343o cont\355nua limita frequ\352ncia e usa) Tj
+/F1 8.4 Tf
+1 0 0 1 48 499 Tm
+(mudan\347as de cena; ela n\343o \351 grava\347\343o cont\355nua nem an\341lise de todos os quadros. Escolha) Tj
+/F1 8.4 Tf
+1 0 0 1 48 487 Tm
+(explicitamente uma fonte, verifique permiss\365es e teste a conex\343o antes de depender do recurso.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 475 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 463 Tm
+(URLs RTSP podem conter usu\341rio/senha: guarde-as somente em configura\347\343o local com permiss\343o 0600.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 451 Tm
+(Uma checagem de URL n\343o confirma a c\342mera f\355sica nem credenciais corretas. Feche a tela de vis\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 439 Tm
+(para liberar a captura.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 427 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 415 Tm
+(9. Web, GitHub e plugins) Tj
+/F1 8.4 Tf
+1 0 0 1 48 403 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 391 Tm
+(* Web: plugin nativo para pesquisa e leitura de p\341ginas p\372blicas. Requer internet, integra\347\343o ativa) Tj
+/F1 8.4 Tf
+1 0 0 1 48 379 Tm
+(e provedor dispon\355vel. O leitor limita destinos locais/privados para reduzir SSRF. N\343o \351 acesso) Tj
+/F1 8.4 Tf
+1 0 0 1 48 367 Tm
+(irrestrito a qualquer rede.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 355 Tm
+(* GitHub: pode ler reposit\363rios p\372blicos ou os acess\355veis pela conta autenticada via gh. Edi\347\343o \351) Tj
+/F1 8.4 Tf
+1 0 0 1 48 343 Tm
+(uma a\347\343o expl\355cita no painel, com branch e confirma\347\343o. N\343o \351 um shell remoto gen\351rico.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 331 Tm
+(* Plugins: o projeto carrega integra\347\365es nativas revisadas \(Web, GitHub, God\222s Eye View\). O painel) Tj
+/F1 8.4 Tf
+1 0 0 1 48 319 Tm
+(informa permiss\365es. Um marketplace para plugins arbitr\341rios de terceiros n\343o est\341 implementado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 307 Tm
+(* JetBrains MCP: configure o servidor MCP HTTP local no PyCharm/CLion, cole a configura\347\343o/endere\347o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 295 Tm
+(em Ferramentas -> IDEs JetBrains, liste as ferramentas e confirme cada execu\347\343o. S\363 aceite) Tj
+/F1 8.4 Tf
+1 0 0 1 48 283 Tm
+(ferramentas e argumentos que entende. O servidor deve permanecer restrito a localhost.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 271 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 259 Tm
+(Autentica\347\343o GitHub: instale e autentique gh conforme a documenta\347\343o oficial antes de abrir o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 247 Tm
+(painel. N\343o cole token em conversa ou no reposit\363rio. O acesso efetivo depende das permiss\365es da) Tj
+/F1 8.4 Tf
+1 0 0 1 48 235 Tm
+(conta e do escopo do token.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 223 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 211 Tm
+(10. Agenda, email, pacotes e Sentinel) Tj
+/F1 8.4 Tf
+1 0 0 1 48 199 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 187 Tm
+(* Agenda: itens e lembretes ficam em SQLite local. Pode criar, listar e concluir compromissos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 175 Tm
+(simples. N\343o \351 sincronizada com Google Calendar/Outlook.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 163 Tm
+(* Email: a ferramenta prepara um mailto: com destinat\341rio, assunto e corpo e abre o aplicativo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 151 Tm
+(configurado. O usu\341rio revisa e envia; Vladmir n\343o envia diretamente pelo Tuta.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 139 Tm
+(* Instala\347\343o de pacotes: solicita instala\347\343o por gerenciadores permitidos, prepara invent\341rio dos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 127 Tm
+(pacotes e exige confirma\347\343o na a\347\343o. O invent\341rio \351 um registro do estado dos gerenciadores, n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 115 Tm
+(imagem de sistema nem restaura\347\343o completa. H\341 restri\347\365es contra AUR/PKGBUILD e instala\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 103 Tm
+(irrestrita.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 91 Tm
+(* Sentinel: interface para estado, varredura de caminho com ClamAV e investiga\347\343o local.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 3/5) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 6058 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(Instale/atualize ClamAV e suas assinaturas por conta pr\363pria. A an\341lise n\343o cobre automaticamente) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(todo o sistema com privil\351gios administrativos e um resultado limpo s\363 se aplica aos itens que o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(ClamAV conseguiu examinar. Consulta VirusTotal por hash \351 opcional e desativada por padr\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(11. Autoevolu\347\343o e treino) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(O mecanismo experimental re\372ne sinais t\351cnicos, cria propostas e executa candidatos em ambiente) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(isolado para avalia\347\343o. O candidato n\343o \351 aplicado automaticamente ao programa de produ\347\343o; promo\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(e rollback s\343o a\347\365es protegidas. A rotina agendada depende de arquivos systemd do usu\341rio preparados) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(e ativa\347\343o expl\355cita.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(O treino de adaptadores/QloRA \351 uma trilha separada. Exige contrato expl\355cito de autoriza\347\343o,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+(dataset revisado, hashes e limites de rodadas/tempo/VRAM. Resultado \351 um candidato e passa por) Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(compara\347\343o de qualidade/efici\352ncia; n\343o \351 prova de melhora geral e n\343o troca o modelo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+(automaticamente. Se os artefatos, contrato ou autoriza\347\343o n\343o estiverem presentes, o treino n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+(come\347a.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(12. Android e Wear OS) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(O c\363digo nativo est\341 em mobile-android/, vladmir-companion/ e vladmir-wear/. Para compilar, use) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(Android Studio com SDK/JDK compat\355veis e consulte os READMEs e Gradle wrappers. Instale um build de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+(debug em aparelho de teste; builds publicados exigem assinatura configurada fora do Git.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+(O app m\363vel oferece chat com servidor configurado, envio de c\342mera, chamada por turnos de voz e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+(fluxo ARCore opcional. A conectividade exige que o PC esteja acess\355vel, API ligada, TLS/endere\347o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+(adequados quando remoto, pareamento e permiss\365es concedidas. AR depende de ARCore suportado e Google) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+(Play Services for AR. O c\363digo informa que o mapa AR s\363 existe enquanto a tela est\341 aberta; n\343o h\341) Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+(persist\352ncia autom\341tica do mapa.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(O Companion encaminha notifica\347\365es selecionadas e utilidades pelo Bluetooth pareado. WhatsApp \351) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(tratado como app selecion\341vel; o preview textual tem limite curto e depende do acesso a notifica\347\365es) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+(do Android. A tela de diagn\363stico do Companion declara que reconex\343o autom\341tica ainda n\343o est\341) Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(habilitada. Portanto, n\343o conte com v\355nculo permanente em segundo plano sem validar no) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+(aparelho/vers\343o atual.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+(Sensores listados dependem do hardware do rel\363gio e permiss\365es Android. A lista indica) Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+(disponibilidade, n\343o calibra\347\343o cl\355nica ou exatid\343o. Batimentos card\355acos, GPS, movimento,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+(notifica\347\365es e chamadas devem ser validados individualmente num aparelho real.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+(13. Privacidade, backups e seguran\347a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+(* Mantenha ~/.config/vladmir/config.json em modo 0600 e n\343o versionado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+(* Fa\347a backup de configura\347\343o, mem\363ria, agenda e biblioteca antes de atualizar.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
+(* Mantenha a API m\363vel em loopback; para acesso remoto, use HTTPS/t\372nel autenticado e n\343o exponha) Tj
+/F1 8.4 Tf
+1 0 0 1 48 262 Tm
+(porta aberta \340 internet.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 250 Tm
+(* Revise integra\347\365es externas ativadas, sobretudo Web, Honcho, GitHub e envio opcional de hash.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 238 Tm
+(* Trate conte\372do de p\341ginas, documentos e reposit\363rios como dado n\343o confi\341vel.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 226 Tm
+(* Consulte SECURITY.md para relato privado de vulnerabilidades e os arquivos de terceiros para) Tj
+/F1 8.4 Tf
+1 0 0 1 48 214 Tm
+(licen\347as.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 202 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 190 Tm
+(14. Checklist de diagn\363stico) Tj
+/F1 8.4 Tf
+1 0 0 1 48 178 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 166 Tm
+(1. Rode ./scripts/vladmir --check e leia cada depend\352ncia ausente.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 154 Tm
+(2. Confirme ollama list e teste se o servi\347o responde em 127.0.0.1:11434.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 142 Tm
+(3. Veja o log do Vladmir sem copiar tokens, URLs privadas ou transcri\347\365es para suporte p\372blico.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 130 Tm
+(4. Para \341udio, confira fontes/sa\355das Pulse e perfil Bluetooth.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 118 Tm
+(5. Para c\342mera, valide permiss\365es e captura do frame separadamente do modelo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 106 Tm
+(6. Para celular/rel\363gio, confirme API, endere\347o, TLS, pareamento, permiss\365es e servi\347o em segundo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 94 Tm
+(plano.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 82 Tm
+(7. Para biblioteca, confira formato real, tamanho, depend\352ncias de OCR/transcri\347\343o e estado do item.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 4/5) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 1003 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(8. Se falhar, registre vers\343o/commit, passos m\355nimos, mensagem de erro sanitizada e se o defeito) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(pode ser reproduzido.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(15. Fontes internas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(README raiz; config/config.example.json; src/mark/config.py; src/mark/desktop.py;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(src/mark/mobile_api.py; src/mark/attachment_limits.py; src/mark/cognition/library_extract.py;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(src/mark/audio.py; src/mark/tts.py; src/mark/vision.py; src/mark/plugins.py; src/mark/github.py;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(src/mark/jetbrains_mcp.py; src/mark/agenda.py; src/mark/package_install.py; src/mark/sentinel.py;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(src/mark/evolution/; mobile-android/README.md; vladmir-companion/; vladmir-wear/; SECURITY.md.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 5/5) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000245 00000 n 
+0000000347 00000 n 
+0000005044 00000 n 
+0000005180 00000 n 
+0000011047 00000 n 
+0000011183 00000 n 
+0000017295 00000 n 
+0000017432 00000 n 
+0000023543 00000 n 
+0000023681 00000 n 
+0000024737 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+24875
+%%EOF

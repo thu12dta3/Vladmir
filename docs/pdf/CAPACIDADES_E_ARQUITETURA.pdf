@@ -1,0 +1,719 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5783 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 48 790 Tm
+(Capacidades e arquitetura do Vladmir) Tj
+/F1 8.4 Tf
+1 0 0 1 48 770 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 758 Tm
+(Leitura t\351cnica do branch main em 14/10/2026. Este invent\341rio descreve o que o c\363digo) Tj
+/F1 8 Tf
+1 0 0 1 48 746 Tm
+(prop\365e e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 734 Tm
+(implementa. N\343o \351 certifica\347\343o, resultado de teste de hardware nem garantia de opera\347\343o em todas as) Tj
+/F1 8.4 Tf
+1 0 0 1 48 722 Tm
+(distribui\347\365es.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 710 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 698 Tm
+(Resumo executivo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 683 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 671 Tm
+(Vladmir \351 composto por um cliente Qt para Linux, um backend Python que usa Ollama local, servi\347os) Tj
+/F1 8.4 Tf
+1 0 0 1 48 659 Tm
+(locais para voz/vis\343o e dados em SQLite/arquivos privados, al\351m de clientes Android/Wear. O desenho) Tj
+/F1 8.4 Tf
+1 0 0 1 48 647 Tm
+(favorece infer\352ncia local e integra\347\365es opcionais sob demanda. O reposit\363rio inclui limites e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 635 Tm
+(confirma\347\365es em v\341rias a\347\365es sens\355veis, mas integra\347\343o local ainda depende muito de configura\347\343o,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 623 Tm
+(vers\343o dos servi\347os e estado dos dispositivos.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 611 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 599 Tm
+(| \301rea | Estado no c\363digo | Depend\352ncias e limite principal |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 587 Tm
+(| --- | --- | --- |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 575 Tm
+(| Chat de desktop | Implementado | Ollama e modelo instalado; contexto finito |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 563 Tm
+(| Perfis de chat, engenharia e ensino | Implementado | Os perfis n\343o criam modelos nem capacidade) Tj
+/F1 8.4 Tf
+1 0 0 1 48 551 Tm
+(ausentes |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 539 Tm
+(| Mem\363ria local compartilhada | Implementada | Persist\352ncia local; mem\363ria/contexto limitados |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 527 Tm
+(| Biblioteca de conhecimento | Implementada | Extra\347\343o parcial; quotas e formatos espec\355ficos |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 515 Tm
+(| Voz e s\355ntese | Implementadas | Whisper, Piper, FFmpeg e rota de \341udio do sistema |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 503 Tm
+(| Chamada no desktop/mobile | Implementada por turnos | N\343o \351 \341udio full-duplex em tempo real |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 491 Tm
+(| Vis\343o e c\342mera | Implementadas | Captura de frame; c\342mera/modelo/FFmpeg precisam funcionar |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 479 Tm
+(| Busca/leitura web | Implementadas como integra\347\343o nativa | Internet e provedor; p\341ginas podem) Tj
+/F1 8.4 Tf
+1 0 0 1 48 467 Tm
+(falhar ou mudar |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 455 Tm
+(| GitHub | Leitura e edi\347\343o expl\355cita | gh, rede e permiss\343o da conta; limites de conte\372do |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 443 Tm
+(| Plugins | Integra\347\365es nativas | Sem marketplace gen\351rico de extens\365es |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 431 Tm
+(| JetBrains MCP | Cliente local experimental | Servidor da IDE precisa ser iniciado e compat\355vel |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 419 Tm
+(| Agenda e lembretes | Implementados localmente | Sem sincroniza\347\343o de calend\341rio externo |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 407 Tm
+(| Email | Prepara\347\343o de rascunho | Envio final ocorre no cliente de email |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 395 Tm
+(| Sentinel | Varredura local integrada | ClamAV/assinaturas; cobertura limitada ao caminho) Tj
+/F1 8.4 Tf
+1 0 0 1 48 383 Tm
+(selecionado |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 371 Tm
+(| Instala\347\343o de software | Solicita\347\343o limitada e confirmada | Pacotes/gerenciadores permitidos;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 359 Tm
+(backup \351 invent\341rio |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 347 Tm
+(| Autoevolu\347\343o de c\363digo | Candidatos isolados | Revis\343o/promo\347\343o n\343o autom\341ticas |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 335 Tm
+(| Treino de adaptador | Fluxo experimental protegido | Dataset, autoriza\347\343o, GPU e avalia\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 323 Tm
+(necess\341rios |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 311 Tm
+(| Android | C\363digo Kotlin/Compose | SDK, build, servidor, TLS, pareamento e permiss\365es |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 299 Tm
+(| Companion/Wear | C\363digo nativo e protocolo | Pareamento e comportamento de segundo plano precisam) Tj
+/F1 8.4 Tf
+1 0 0 1 48 287 Tm
+(valida\347\343o f\355sica |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 275 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 263 Tm
+(1. Componentes) Tj
+/F1 8.4 Tf
+1 0 0 1 48 251 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 239 Tm
+(Desktop e n\372cleo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 227 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 215 Tm
+(src/mark/desktop.py implementa a interface PyQt. Os m\363dulos desktop_* organizam di\341logos de vis\343o,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 203 Tm
+(mem\363ria, biblioteca, plugins, JetBrains, Sentinel, evolu\347\343o e outras ferramentas. brain*, core/ e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 191 Tm
+(cognition/ lidam com roteamento de prompts, provedores, ferramentas, contexto e fun\347\365es cognitivas.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 179 Tm
+(A chamada \351 iniciada no mesmo app desktop.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 167 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 155 Tm
+(O usu\341rio seleciona os perfis Geral, Engenheiro e Professor. Existem conversas especializadas e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 143 Tm
+(mem\363ria compartilhada, mas reten\347\343o \351 limitada pelos bancos locais, contexto carregado e pol\355tica do) Tj
+/F1 8.4 Tf
+1 0 0 1 48 131 Tm
+(m\363dulo. O seletor \223instant\342neo/m\351dio/alto\224 escolhe op\347\365es de gera\347\343o e contexto; n\343o treina o modelo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 119 Tm
+(nem garante aumento mensur\341vel de qualidade.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 107 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 95 Tm
+(Infer\352ncia local e efici\352ncia) Tj
+/F1 8.4 Tf
+1 0 0 1 48 83 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 1/4) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 5745 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(O caminho padr\343o usa HTTP no Ollama local, sem pesos embutidos. Perfis de modelo v\352m de models e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(ollama em config.json. keep_alive: 0 solicita descarregamento depois da chamada para liberar VRAM;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(isso pode elevar lat\352ncia de pr\363xima resposta. O desempenho depende do modelo, quantiza\347\343o, backend) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(CUDA/CPU, concorr\352ncia e RAM/VRAM dispon\355veis.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(Os modelos nomeados no exemplo s\343o sugest\365es, n\343o depend\352ncias universais. Sem tag correspondente no) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(Ollama, a chamada falha. O projeto n\343o converte automaticamente modelos em uma variante \223Heretic\224,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(n\343o fornece pesos propriet\341rios e n\343o pode inferir capacidades apenas pelo nome.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(2. Chat, contexto e especializa\347\365es) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(* Geral: chat prim\341rio; aceita anexos limitados, op\347\365es de racioc\355nio e ferramentas dispon\355veis no) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+(backend.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(* Engenheiro: roteia para perfil de programa\347\343o e oferece espa\347o de trabalho, miss\365es, leitura de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+(c\363digo, verifica\347\343o local e integra\347\365es configuradas.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+(* Professor: organiza materiais e estudo, com mem\363ria compartilhada e refer\352ncia opcional \340) Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+(biblioteca.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(* Contexto: conversa persistida n\343o significa que todo o hist\363rico \351 enviado em cada gera\347\343o. H\341) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(limite de mensagens e janela do modelo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(* Ferramentas: o modelo n\343o obt\351m automaticamente acesso irrestrito ao computador. A aplica\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(decide ferramentas, permiss\365es e confirma\347\365es.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(3. Biblioteca e extra\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+(cognition/library_extract.py limita arquivo de entrada a 64 MiB, conte\372do expandido de arquivo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+(compactado a 32 MiB e extra\347\343o a 2 milh\365es de caracteres. O chat possui limites separados \(5) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+(arquivos; 6 MiB cada; 8 MiB total; 400 mil caracteres de texto extra\355do\).) Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+(H\341 leitores para PDF, DOCX, EPUB, HTML, CSV, JSON, YAML, XML, muitos formatos de c\363digo e formatos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(adicionais por parser universal. A extra\347\343o depende de ferramentas como pdftotext, Tesseract/OCR,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(ffmpeg/ffprobe e Whisper quando aplic\341vel. A leitura pode se limitar a p\341ginas/trechos ou metadados.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+(F\363rmulas de planilhas, imagens, arquivos compactados, documentos protegidos e bin\341rios n\343o s\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(necessariamente interpretados como uma pessoa faria. Importar para a biblioteca n\343o ajusta os pesos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+(do modelo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+(4. Entrada/sa\355da de voz) Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+(audio.py captura fluxo Pulse, mono, 16 kHz por padr\343o, calibra limiar e detecta enunciados. Whisper) Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+(transcreve; tts.py sintetiza com Piper e pode recorrer a espeak-ng. A sele\347\343o de dispositivo usa) Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+(configura\347\343o Pulse/PipeWire. Falta de modelos ou dispositivos resulta em falha ou fallback, n\343o em) Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+(substitui\347\343o perfeita.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+(A chamada m\363vel/desktop envia turnos de \341udio \340 API. N\343o h\341 garantia de fluxo bidirecional) Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
+(continuamente aberto, interrup\347\343o em tempo real em todas as rotas, baixa lat\352ncia constante ou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 262 Tm
+(coexist\352ncia perfeita com \341udio Bluetooth de alta qualidade.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 250 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 238 Tm
+(5. Vis\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 226 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 214 Tm
+(vision.py captura um frame via FFmpeg, verifica que os bytes representam imagem e passa a imagem ao) Tj
+/F1 8.4 Tf
+1 0 0 1 48 202 Tm
+(perfil compat\355vel com vis\343o. A fonte pode ser USB ou RTSP\(S\). H\341 m\363dulos de fluxo ao) Tj
+/F1 8.4 Tf
+1 0 0 1 48 190 Tm
+(vivo/foco/qualidade; a cad\352ncia \351 limitada. O caminho n\343o equivale a grava\347\343o cont\355nua,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 178 Tm
+(reconhecimento de todos os objetos, rastreamento persistente ou substitui\347\343o de sensor) Tj
+/F1 8.4 Tf
+1 0 0 1 48 166 Tm
+(especializado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 154 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 142 Tm
+(Depend\352ncias t\355picas: dispositivo vis\355vel para Linux, permiss\343o de c\342mera, FFmpeg, URL autenticada) Tj
+/F1 8.4 Tf
+1 0 0 1 48 130 Tm
+(v\341lida e modelo multimodal. Uma URL v\341lida ou uma c\342mera listada n\343o prova que o stream esteja) Tj
+/F1 8.4 Tf
+1 0 0 1 48 118 Tm
+(acess\355vel.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 106 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 94 Tm
+(6. Web, integra\347\365es e plugins) Tj
+/F1 8.4 Tf
+1 0 0 1 48 82 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 2/4) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 6090 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(O plugin web consulta buscador e p\341ginas p\372blicas. O c\363digo filtra destinos n\343o p\372blicos para) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(reduzir SSRF; essa prote\347\343o tamb\351m significa que n\343o \351 navegador de intranet nem acesso sem limites) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(\340 rede.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(O plugin github l\352 projetos acess\355veis via API/gh; edi\347\343o ocorre por a\347\343o expl\355cita e confirma a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(grava\347\343o. A conta precisa estar autenticada e ter escopo adequado. JetBrains MCP aceita servidor) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(HTTP em localhost, lista ferramentas e pede confirma\347\343o antes da execu\347\343o. As opera\347\365es poss\355veis) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(dependem das ferramentas expostas pela IDE.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(O registro de plugins \(plugins.py\) \351 uma lista pequena de recursos nativos. O pr\363prio di\341logo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+(informa que plugins arbitr\341rios externos n\343o s\343o executados. N\343o h\341 sandbox universal para extens\365es) Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(baixadas de um marketplace.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(7. Recursos auxiliares) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+(* Agenda: SQLite local, inclui tarefas, data/hora e conclus\343o; lembretes s\343o acionados pela) Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+(aplica\347\343o e n\343o sincronizam calend\341rio externo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(* Email: EmailComposerDialog monta mailto:; usu\341rio revisa e envia no aplicativo padr\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(* God\222s Eye View: ferramenta geogr\341fica local sob demanda; dados e visualiza\347\343o dependem dos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(provedores selecionados e da rede.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(* Sentinel: usa ClamAV no caminho escolhido e registra relat\363rio local. N\343o \351 su\355te EDR nem) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+(valida\347\343o de todo o sistema. VirusTotal n\343o recebe hash por padr\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(* Pacotes: package_install.py restringe gerenciadores/origens e cria invent\341rio antes da instala\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+(autorizada. Invent\341rio n\343o reverte todos os efeitos colaterais de pacotes.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+(8. API m\363vel e autentica\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+(mobile_api.py fornece endpoints de sa\372de, modelos, agenda, hist\363rico, status de pareamento, sess\343o,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+(chat completions, voz e telemetria do Wear. Por padr\343o a API \351 local. Autentica\347\343o vincula) Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(sess\343o/dispositivo; a\347\365es cr\355ticas ficam bloqueadas para cliente n\343o propriet\341rio. Corpos, texto e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(anexos possuem limites expl\355citos. Uma requisi\347\343o concorrente pode receber HTTP 429.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(O caminho remoto exige configura\347\343o consciente de TLS/t\372nel, endere\347os e autoriza\347\343o. N\343o h\341) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+(endpoint pessoal embutido. A conectividade f\355sica deve ser comprovada com o app do servidor ativo,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+(celular dispon\355vel, certificados/endere\347o v\341lidos, pareamento e regras de rede apropriadas.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+(9. Android, Companion e Wear OS) Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+(O cliente Android cont\351m chat, captura de foto, voz, anexos e ARCore opcional. Dispositivo sem) Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+(ARCore suportado ou sem Play Services for AR n\343o executa o modo AR. O mapa AR atual dura apenas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+(enquanto a tela permanece ativa; n\343o persiste entre sess\365es.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+(O Companion pode retransmitir notifica\347\365es selecionadas, inclusive notifica\347\343o de WhatsApp com) Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
+(pr\351via limitada, quando o usu\341rio concede Notification Listener Access. O protocolo Bluetooth) Tj
+/F1 8.4 Tf
+1 0 0 1 48 262 Tm
+(autenticado depende de pareamento e servi\347o no Android. O diagn\363stico da interface registra que) Tj
+/F1 8.4 Tf
+1 0 0 1 48 250 Tm
+(reconex\343o autom\341tica ainda n\343o est\341 habilitada; economia de bateria do fabricante pode suspender o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 238 Tm
+(processo. O Wear enumera sensores dispon\355veis, mas disponibilidade e permiss\365es variam por modelo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 226 Tm
+(N\343o se deve tratar leitura de batimentos ou orienta\347\343o como medi\347\343o m\351dica.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 214 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 202 Tm
+(O c\363digo-fonte n\343o comprova que APKs tenham sido compilados, instalados, homologados ou que a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 190 Tm
+(conex\343o fique est\341vel com tela desligada. Isso exige build/assinatura e ensaios em aparelhos e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 178 Tm
+(vers\365es concretas.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 166 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 154 Tm
+(10. Privacidade e seguran\347a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 142 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 130 Tm
+(Dados s\343o armazenados sob pastas locais do usu\341rio. O projeto recomenda config 0600, API em loopback) Tj
+/F1 8.4 Tf
+1 0 0 1 48 118 Tm
+(e t\372nel autenticado para acesso externo. Web, GitHub, Honcho e VirusTotal envolvem envio de dados a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 106 Tm
+(terceiros quando usados; Honcho e VirusTotal ficam desligados por padr\343o na configura\347\343o de exemplo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 94 Tm
+(Revise pol\355tica de cada servi\347o antes de habilitar.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 82 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 3/4) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 3126 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(Os limites de app n\343o substituem atualiza\347\343o do sistema, antiv\355rus completo, backup, controle de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(permiss\365es ou revis\343o de c\363digo. Relate vulnerabilidades em privado conforme SECURITY.md.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(11. Autoevolu\347\343o e estado de maturidade) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(evolution/engine.py executa experimento isolado, coleta compara\347\343o e grava relat\363rios. A decis\343o de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(candidato continua marcada como REVIEW_REQUIRED, sem autoriza\347\343o de promo\347\343o. A aplica\347\343o ao runtime) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(\351 uma a\347\343o de manuten\347\343o distinta. O painel tem start/stop e rotina systemd opt-in; a rotina n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(deve ser presumida ativa em instala\347\343o nova.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+(automatic_training.py requer contrato com autoriza\347\343o expl\355cita, dataset aprovado pelo propriet\341rio,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(arquivos com hash, holdout e par\342metros limitados. A medi\347\343o de energia/qualidade/VRAM pode faltar;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+(sem medi\347\343o v\341lida, o candidato n\343o deve ser considerado eficiente. O processo n\343o atualiza pesos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(ativos por conta pr\363pria.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+(12. Como confirmar capacidade numa instala\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(1. Registre o commit instalado e o sistema operacional.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(2. Rode o --check e guarde apenas sa\355da sem segredos.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(3. Confirme Ollama/modelos locais.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(4. Teste cada recurso por separado com dispositivo/servi\347o dispon\355vel.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+(5. Para API, valide /health, /v1/models e autentica\347\343o apropriada sem expor token.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(6. Para c\342mera/\341udio/Bluetooth, fa\347a teste f\355sico e verifique estado do dispositivo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+(7. Anote sucesso, erro, lat\352ncia, depend\352ncias e escopo do teste.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 490 Tm
+(Refer\352ncias do c\363digo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 475 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 463 Tm
+(src/mark/desktop.py, src/mark/brain*.py, src/mark/core/, src/mark/cognition/,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 451 Tm
+(src/mark/mobile_api.py, src/mark/attachment_limits.py, src/mark/plugins.py, src/mark/github.py,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 439 Tm
+(src/mark/jetbrains_mcp.py, src/mark/package_install.py, src/mark/sentinel.py, src/mark/vision*.py,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 427 Tm
+(src/mark/audio.py, src/mark/tts.py, src/mark/agenda.py, src/mark/evolution/, mobile-android/,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 415 Tm
+(vladmir-companion/, vladmir-wear/.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 4/4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000141 00000 n 
+0000000238 00000 n 
+0000000340 00000 n 
+0000006175 00000 n 
+0000006311 00000 n 
+0000012108 00000 n 
+0000012244 00000 n 
+0000018386 00000 n 
+0000018523 00000 n 
+0000021702 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+21840
+%%EOF

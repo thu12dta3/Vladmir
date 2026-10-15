@@ -1,0 +1,575 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 6757 >>
+stream
+BT
+/F2 15 Tf
+1 0 0 1 48 790 Tm
+(Limita\347\365es, defeitos conhecidos e plano de melhorias) Tj
+/F1 8.4 Tf
+1 0 0 1 48 770 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 758 Tm
+(Base: inspe\347\343o est\341tica do c\363digo em main em 14/10/2026. Os itens abaixo n\343o afirmam que) Tj
+/F1 8 Tf
+1 0 0 1 48 746 Tm
+(um bug foi) Tj
+/F1 8.4 Tf
+1 0 0 1 48 734 Tm
+(reproduzido em uma instala\347\343o. \223Defeito/risco observado\224 descreve limite expl\355cito ou lacuna vis\355vel) Tj
+/F1 8.4 Tf
+1 0 0 1 48 722 Tm
+(no c\363digo. Prioridades s\343o recomenda\347\365es, n\343o compromisso de prazo.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 710 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 698 Tm
+(Como priorizar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 683 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 671 Tm
+(* P0 \227 bloqueador de confian\347a: risco de perda de dados, exposi\347\343o de credencial, corrup\347\343o ou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 659 Tm
+(instala\347\343o insegura.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 647 Tm
+(* P1 \227 estabilidade: conectividade, opera\347\343o cont\355nua, \341udio/v\355deo e recupera\347\343o de erro.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 635 Tm
+(* P2 \227 capacidade: limites e integra\347\343o incompleta.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 623 Tm
+(* P3 \227 acabamento: telemetria, documenta\347\343o e experi\352ncia.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 611 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 599 Tm
+(Matriz de lacunas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 587 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 575 Tm
+(| Prioridade | \301rea | Limita\347\343o observada | Impacto pr\341tico | Solu\347\343o recomendada |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 563 Tm
+(| --- | --- | --- | --- | --- |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 551 Tm
+(| P1 | Companion -> Wear | A pr\363pria tela de diagn\363stico informa que reconex\343o autom\341tica ainda n\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 539 Tm
+(est\341 habilitada. | Celular bloqueado, processo suspenso ou perda de Bluetooth pode deixar o rel\363gio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 527 Tm
+(offline. | Implementar reconex\343o com ciclo de vida Android, backoff, foreground service/notifica\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 515 Tm
+(persistente quando permitido, teste com tela apagada e pol\355ticas de bateria de fabricantes. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 503 Tm
+(| P1 | Chamada | Voz \351 processada por turnos e depende de Whisper/Piper; n\343o \351 stream duplex em) Tj
+/F1 8.4 Tf
+1 0 0 1 48 491 Tm
+(tempo real. | Pausas e lat\352ncia; interrup\347\343o e resposta natural podem variar. | Projetar canal de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 479 Tm
+(\341udio persistente com cancelamento, VAD/streaming e buffers; medir lat\352ncia fim a fim, perda e eco) Tj
+/F1 8.4 Tf
+1 0 0 1 48 467 Tm
+(antes de substituir o fluxo atual. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 455 Tm
+(| P1 | \301udio Bluetooth | Entrada de headset pode provocar perfil HFP/HSP e reduzir a m\372sica enquanto) Tj
+/F1 8.4 Tf
+1 0 0 1 48 443 Tm
+(a chamada usa microfone Bluetooth. | M\372sica perde est\351reo/qualidade durante chamada. | Detectar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 431 Tm
+(rota/perfil, oferecer entrada do microfone separado e manter sa\355da A2DP quando a pilha permitir;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 419 Tm
+(testar PipeWire, headset e Discord/voz simultaneamente. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 407 Tm
+(| P1 | Dispositivos | Verifica\347\343o de configura\347\343o n\343o \351 valida\347\343o f\355sica de c\342mera, fone, USB ou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 395 Tm
+(rel\363gio. | Interface pode afirmar que existe fonte mesmo sem imagem ou \341udio \372til. | Exibir estado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 383 Tm
+(separado: configurado, enumerado, stream aberto e amostra v\341lida; oferecer diagn\363stico com timestamp) Tj
+/F1 8.4 Tf
+1 0 0 1 48 371 Tm
+(e dispositivo selecionado. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 359 Tm
+(| P1 | API m\363vel | Sess\365es dependem de telefone, API, TLS/endere\347o e estado de pareamento. Android) Tj
+/F1 8.4 Tf
+1 0 0 1 48 347 Tm
+(pode suspender o Companion. | Offline intermitente ou chamadas que n\343o iniciam em segundo plano. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 335 Tm
+(Adotar m\341quina de estados, heartbeat barato, reconex\343o controlada, mensagem de erro por camada e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 323 Tm
+(ensaios prolongados com bloqueio/tela apagada. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 311 Tm
+(| P2 | Anexos do chat | 5 arquivos, 6 MiB por arquivo, 8 MiB total e 400 mil caracteres. | Grandes) Tj
+/F1 8.4 Tf
+1 0 0 1 48 299 Tm
+(datasets e m\355dia n\343o cabem; arquivo de 1 GB n\343o \351 suportado. | Upload em streaming, armazenamento) Tj
+/F1 8.4 Tf
+1 0 0 1 48 287 Tm
+(tempor\341rio com quotas, cancelamento e progresso; fazer an\341lise por blocos e limpar tempor\341rios. S\363) Tj
+/F1 8.4 Tf
+1 0 0 1 48 275 Tm
+(elevar limite ap\363s medir RAM, disco e superf\355cie de ataque. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 263 Tm
+(| P2 | Biblioteca | Extra\347\343o \351 heterog\352nea e limitada; formatos bin\341rios ou digitalizados podem) Tj
+/F1 8.4 Tf
+1 0 0 1 48 251 Tm
+(virar metadados, texto est\341tico ou resultado parcial. | Busca pode n\343o achar conte\372do que parece) Tj
+/F1 8.4 Tf
+1 0 0 1 48 239 Tm
+(visualmente presente. | Informar m\351todo/percentual/p\341ginas extra\355das, oferecer OCR separado e fila) Tj
+/F1 8.4 Tf
+1 0 0 1 48 227 Tm
+(de reprocessamento; manter refer\352ncia \340 origem e confirmar trechos antes de responder. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 215 Tm
+(| P2 | AR m\363vel | ARCore opcional; mapa atual existe apenas enquanto a tela est\341 aberta. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 203 Tm
+(Reorientar/sair pode perder o mapa; aparelho incompat\355vel n\343o funciona. | Persist\352ncia local) Tj
+/F1 8.4 Tf
+1 0 0 1 48 191 Tm
+(criptografada opcional, mapa incremental com or\347amento/expira\347\343o e UI clara sobre suporte do ARCore;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 179 Tm
+(medir deriva e consumo antes de ativar por padr\343o. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 167 Tm
+(| P2 | C\342mera e vis\343o | Modelo v\352 frames amostrados; cad\352ncia e qualidade variam, sem) Tj
+/F1 8.4 Tf
+1 0 0 1 48 155 Tm
+(grava\347\343o/rastreamento persistente. | Detalhes r\341pidos podem n\343o ser detectados; baixa luz/foco) Tj
+/F1 8.4 Tf
+1 0 0 1 48 143 Tm
+(afetam respostas. | Mostrar indicador de frame/idade/resolu\347\343o, ajuste de frequ\352ncia e foco;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 131 Tm
+(comparar amostras reais com m\351trica de lat\352ncia e precis\343o. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 119 Tm
+(| P2 | Professor/Engenheiro | Especializa\347\343o usa os modelos configurados; mem\363ria/contexto continuam) Tj
+/F1 8.4 Tf
+1 0 0 1 48 107 Tm
+(limitados. | Retomada de um detalhe antigo pode falhar. | Resumo estruturado por conversa, sele\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 95 Tm
+(recuper\341vel de mem\363rias e controle de contexto; avalia\347\365es com conversas longas e refer\352ncias) Tj
+/F1 8.4 Tf
+1 0 0 1 48 83 Tm
+(expl\355citas. |) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 1/3) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 6870 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(| P2 | Autoevolu\347\343o | Gera experimentos isolados, mas n\343o promove c\363digo automaticamente. Ciclos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(dependem de systemd e instala\347\343o/ativa\347\343o opt-in. | Usu\341rio pode esperar que \223Iniciar\224 funcione) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(quando servi\347o ainda n\343o foi preparado, ou interpretar candidato como mudan\347a j\341 aplicada. | Mostrar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(estado distinto \223n\343o instalado / parado / rodando / aguardando / candidato para revis\343o\224; manter) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(diff, rollback e m\351tricas na tela. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+(| P2 | Treino | QLoRA depende de contrato, dataset aprovado, holdout, GPU e medi\347\343o. N\343o altera) Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(modelo ativo. | Pode n\343o iniciar sem pr\351-requisitos; resultado n\343o garante intelig\352ncia geral. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+(Assistente de pr\351-voo, relat\363rio de espa\347o/VRAM/energia, pausa/checkpoint e avalia\347\343o contra) Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(baseline; proibir promo\347\343o sem revis\343o. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(| P2 | Email | O recurso monta mailto: e abre um rascunho; n\343o envia por SMTP/API diretamente. | A) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+(mensagem pode n\343o abrir se app padr\343o estiver ausente; envio \351 manual. | Rotular como \223Preparar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(rascunho\224; se houver integra\347\343o de envio futura, implementar OAuth/API oficial, cofre de segredo,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+(tela de confirma\347\343o e registro local m\355nimo. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(| P2 | Agenda | Persist\352ncia em SQLite local, sem sincroniza\347\343o externa. | Lembretes n\343o acompanham) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+(automaticamente outros calend\341rios/dispositivos. | Exporta\347\343o/importa\347\343o ICS e integra\347\343o OAuth) Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+(opcional, com conflitos e fuso hor\341rio vis\355veis. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+(| P2 | Plugins | Integra\347\365es s\343o nativas; n\343o existe marketplace gen\351rico de plugins externos. | N\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(\351 poss\355vel instalar plugins como na loja do ChatGPT. | Definir API versionada, permiss\365es por) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(capacidade, sandbox, assinatura e desinstala\347\343o antes de criar marketplace. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+(| P2 | JetBrains MCP | Depende do servidor local e de compatibilidade da IDE. A execu\347\343o pode) Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(ler/modificar projeto conforme a ferramenta. | Conex\343o/lista de ferramentas pode falhar; ferramenta) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+(pode ter efeitos no workspace. | Mostrar schemas e plano antes da chamada, limites de timeout/sa\355da,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(restri\347\343o por workspace e log de consentimento. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+(| P2 | GitHub | A\347\365es dependem de gh, rede, permiss\365es e branch escolhidos; edi\347\343o tem limites por) Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+(arquivo. | Um reposit\363rio fora do escopo da conta n\343o abre; mudan\347as remotas exigem cuidado. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+(Pr\351-visualizar diff, confirmar repo/branch/caminho e SHA, proteger contra conflito e oferecer) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+(backup/rollback. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+(| P2 | Sentinel | Usa ClamAV, caminho selecionado e permiss\365es do usu\341rio. N\343o \351 EDR e n\343o cobre) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+(automaticamente todos os discos/processos. | \223Nenhuma detec\347\343o\224 n\343o prova que todo sistema esteja) Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(limpo. | Exibir escopo, exclus\365es, assinatura/data e erro de acesso; oferecer agendamento somente) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(ap\363s autoriza\347\343o e testar falsos positivos. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+(| P3 | Estado e observabilidade | Diferentes subsistemas podem falhar por depend\352ncia externa e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(retornar mensagens gen\351ricas. | Dif\355cil saber se o erro \351 modelo, API, permiss\343o, codec, rede ou) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+(dispositivo. | Correlacionar ID de requisi\347\343o, etapa e causa sanitizada; n\343o registrar prompts,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+(arquivos, tokens ou \341udio por padr\343o. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+(| P3 | Instala\347\343o de pacotes | Backup da opera\347\343o \351 invent\341rio de pacotes, n\343o snapshot completo;) Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+(gerenciadores t\352m efeitos colaterais. | \223Backup\224 n\343o garante rollback integral do sistema. | Chamar) Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+(de invent\341rio, registrar comando/vers\343o e oferecer instru\347\365es de revers\343o espec\355ficas do) Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+(gerenciador; nunca prometer restaura\347\343o total. |) Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+(Riscos a validar antes de uso di\341rio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+(1. Integridade do estado local: testar c\363pia/restaura\347\343o de configura\347\343o, agenda, mem\363ria e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
+(biblioteca em outro diret\363rio de usu\341rio.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 262 Tm
+(2. Atualiza\347\343o: verificar mudan\347as de esquema e preservar dados antigos antes de substituir a) Tj
+/F1 8.4 Tf
+1 0 0 1 48 250 Tm
+(instala\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 238 Tm
+(3. \301udio cont\355nuo: verificar que microfone fecha ao encerrar chamada e que a rota de sa\355da n\343o muda) Tj
+/F1 8.4 Tf
+1 0 0 1 48 226 Tm
+(inesperadamente.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 214 Tm
+(4. API remota: confirmar TLS, autentica\347\343o, revoga\347\343o de dispositivo, limite de requisi\347\343o e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 202 Tm
+(aus\352ncia de exposi\347\343o p\372blica acidental.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 190 Tm
+(5. Dispositivos Android: testar tela desligada, rein\355cio, revoga\347\343o de permiss\343o, reconex\343o, rota\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 178 Tm
+(e pouca bateria.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 166 Tm
+(6. Sa\355da de modelos: testar resposta vazia, timeout, conte\372do n\343o confi\341vel, chamadas de ferramentas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 154 Tm
+(e limite de contexto.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 142 Tm
+(7. Instala\347\343o: confirmar di\341logo de aprova\347\343o, c\363pia de invent\341rio e a\347\343o realmente executada antes) Tj
+/F1 8.4 Tf
+1 0 0 1 48 130 Tm
+(de declarar sucesso.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 118 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 106 Tm
+(Roteiro sugerido) Tj
+/F1 8.4 Tf
+1 0 0 1 48 94 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 82 Tm
+(Fase A \227 confiabilidade b\341sica) Tj
+/F1 8.4 Tf
+1 0 0 1 48 70 Tm
+() Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 2/3) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 4665 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(* Criar smoke tests automatizados de inicializa\347\343o, API, chat e encerramento de microfone.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(* Publicar sa\355da de diagn\363stico sanitizada que classifica depend\352ncia ausente, timeout e erro de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+(permiss\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(* Fazer backup e restaura\347\343o documentados dos diret\363rios locais.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+(* Manter a API inacess\355vel fora de loopback at\351 configura\347\343o expl\355cita de TLS/autentica\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 730 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 718 Tm
+(Fase B \227 celular e rel\363gio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 706 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 694 Tm
+(* Estabelecer m\341quina de estados \372nica de conex\343o, heartbeat e reconex\343o com backoff.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 682 Tm
+(* Validar foreground service e restri\347\365es de bateria em mais de um fabricante Android.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 670 Tm
+(* Testar notifica\347\365es com conte\372do sens\355vel oculto por padr\343o, WhatsApp e revoga\347\343o do acesso.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 658 Tm
+(* Separar dados de telemetria permitidos de conte\372do de conversas e notifica\347\365es.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 646 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 634 Tm
+(Fase C \227 voz, vis\343o e AR) Tj
+/F1 8.4 Tf
+1 0 0 1 48 622 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 610 Tm
+(* Medir lat\352ncia por fase \(captura, transcri\347\343o, gera\347\343o, s\355ntese, reprodu\347\343o\).) Tj
+/F1 8.4 Tf
+1 0 0 1 48 598 Tm
+(* Criar teste de rota Bluetooth e garantir recupera\347\343o do perfil de m\372sica ap\363s chamada.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 586 Tm
+(* Definir or\347amento de frames, resolu\347\343o, VRAM e temperatura para vis\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 574 Tm
+(* Persistir mapa AR apenas mediante opt-in, criptografia, limite de armazenamento e bot\343o de limpar.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 562 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 550 Tm
+(Fase D \227 biblioteca e recupera\347\343o de conhecimento) Tj
+/F1 8.4 Tf
+1 0 0 1 48 538 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 526 Tm
+(* Reportar formato detectado, estrat\351gia de extra\347\343o, p\341ginas/partes ignoradas e confian\347a.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 514 Tm
+(* Criar fixtures pequenas e seguras por formato; n\343o executar conte\372do importado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 502 Tm
+(* Implementar \355ndice com origem/cita\347\343o interna verific\341vel e remo\347\343o consistente do texto derivado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 490 Tm
+(* Distinguir metadado, OCR, transcri\347\343o e extra\347\343o completa na interface.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 466 Tm
+(Fase E \227 evolu\347\343o respons\341vel) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(* Mostrar diferen\347a entre melhoria proposta, experimento, candidato e release instalado.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(* Exigir baseline/holdout, m\351tricas de qualidade, lat\352ncia, VRAM e energia.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+(* Interromper se seguran\347a, qualidade ou limites de recursos piorarem.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(* Preservar aprova\347\343o expl\355cita para alterar runtime, instalar timer, treinar ou publicar.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 382 Tm
+(Como reportar um defeito) Tj
+/F1 8.4 Tf
+1 0 0 1 48 367 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 355 Tm
+(Inclua: commit/vers\343o, sistema e vers\343o do app, recurso, pr\351-requisitos, passos m\355nimos, esperado,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 343 Tm
+(observado, log sanitizado e frequ\352ncia de reprodu\347\343o. Remova antes tokens, emails pessoais, caminhos) Tj
+/F1 8.4 Tf
+1 0 0 1 48 331 Tm
+(de usu\341rio, URL de c\342mera, endere\347o IP, imagens privadas e conte\372do de conversa. Vulnerabilidades) Tj
+/F1 8.4 Tf
+1 0 0 1 48 319 Tm
+(devem seguir o canal privado de SECURITY.md.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 307 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 295 Tm
+(Crit\351rio de conclus\343o recomendado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 283 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 271 Tm
+(Marque uma corre\347\343o como conclu\355da apenas quando houver evid\352ncia no mesmo n\355vel do) Tj
+/F2 10.5 Tf
+1 0 0 1 48 256 Tm
+(problema:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 241 Tm
+(leitura est\341tica comprova fluxo no c\363digo; teste de unidade valida fun\347\343o isolada; integra\347\343o valida) Tj
+/F1 8.4 Tf
+1 0 0 1 48 229 Tm
+(servi\347os reais; ensaio f\355sico valida c\342mera, \341udio, Bluetooth ou sensores. Informe limites do ensaio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 217 Tm
+(e n\343o transforme mock/fixture em prova de funcionamento do dispositivo.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 3/3) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000134 00000 n 
+0000000231 00000 n 
+0000000333 00000 n 
+0000007142 00000 n 
+0000007278 00000 n 
+0000014200 00000 n 
+0000014336 00000 n 
+0000019053 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+19190
+%%EOF
