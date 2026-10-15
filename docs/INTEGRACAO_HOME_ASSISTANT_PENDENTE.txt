@@ -1,0 +1,94 @@
+Integração com Home Assistant — proposta pendente
+
+Estado: proposta; não implementada nem testada. Esta página transforma em requisito de
+planejamento a necessidade de o assistente entender o estado atual da casa sem enviar todos os
+sensores ao contexto do modelo.
+
+Problema
+
+Uma instalação de Home Assistant pode ter muitos sensores e entidades. Acrescentar o estado
+completo de tudo a cada mensagem consome contexto, aumenta custo/latência e pode esconder a
+informação que responde à pergunta. Além disso, leituras podem estar antigas, indisponíveis ou
+incompletas.
+
+Resultado desejado
+
+Quando o usuário perguntar sobre a casa, Vladmir deverá consultar apenas os dados necessários
+para aquela pergunta e montar uma resposta curta, verificável e atualizada. Por exemplo, uma
+pergunta sobre a sala deve consultar as entidades relevantes daquela área, em vez de anexar o
+inventário inteiro.
+
+Arquitetura proposta
+
+1. Conector local explícito: integração configurada pelo operador para a instância Home
+   Assistant escolhida. Usar API oficial suportada (REST ou WebSocket, a confirmar durante
+   implementação) e um token armazenado fora do repositório, em cofre do sistema quando
+   disponível ou arquivo local com permissões restritas.
+2. Catálogo leve: carregar áreas, nomes, domínios e identificadores das entidades; não enviar
+   todos os valores de sensores ao modelo por padrão.
+3. Consulta sob demanda: transformar a pergunta em filtros por área, tipo de entidade, nome e
+   período. Buscar apenas estados atuais necessários e consultar histórico somente quando a
+   pergunta exigir tendência ou comparação.
+4. Resumo compacto: agrupar resultados por cômodo/categoria, descartar atributos sem relação com
+   a pergunta e respeitar limite de itens e tokens. Cache com validade curta pode reduzir
+   chamadas; todo dado exibido deve manter seu horário de leitura.
+5. Resposta rastreável: informar em linguagem natural quais áreas/entidades foram consultadas, o
+   timestamp e se houve entidade indisponível ou leitura antiga. Não afirmar que o estado está
+   completo quando a consulta falhar.
+6. Ações separadas: primeira versão somente leitura. Qualquer serviço que altere estado (luz,
+   fechadura, clima, alarme etc.) deve exigir permissão específica e confirmação do usuário;
+   nunca inferir autorização para ação a partir de uma pergunta de estado.
+
+Privacidade e segurança
+
+- Desligado por padrão; sem descoberta automática ou envio de dados à nuvem.
+- Restringir conexão ao endpoint explicitamente configurado. Como o Home Assistant costuma estar
+  em rede privada, implementar conector próprio com allowlist e validação de destino; não
+  enfraquecer o bloqueio de SSRF do navegador/web geral.
+- Guardar o token fora do Git e nunca incluí-lo em prompt, log, URL ou mensagem de erro.
+- Expor escopos mínimos e separados: inventário, estado atual e histórico. Não pedir acesso de
+  controle na versão somente leitura.
+- Tratar nomes, estados e atributos fornecidos por entidades como dados não confiáveis, não como
+  instruções para o modelo ou para ferramentas.
+- Limitar número de entidades, tamanho de atributos, janela de histórico, timeout, frequência de
+  consulta e respostas concorrentes.
+- Permitir apagar configuração, cache e dados locais associados.
+
+Critérios de aceite
+
+- [ ] O usuário configura/desativa a integração localmente e o segredo não é versionado ou
+  exposto em logs.
+- [ ] Pergunta sobre cômodo consulta só entidades relevantes, e a requisição ao modelo contém
+  resumo limitado, não inventário completo.
+- [ ] Pergunta de tendência consulta uma janela de histórico delimitada e informa o período
+  usado.
+- [ ] Resposta identifica timestamp, estado indisponível/antigo e falha de integração sem
+  inventar leitura.
+- [ ] Entidades com nomes/atributos que parecem instruções não desviam o comportamento do
+  assistente nem acionam ferramentas.
+- [ ] Testes cobrem timeout, token inválido, entidade removida, valor indisponível, payload
+  excessivo, resposta malformada e tentativa de destino não permitido.
+- [ ] A versão inicial não executa serviços de controle. Se controle for adicionado depois, cada
+  operação terá escopo próprio, prévia clara e confirmação.
+- [ ] Teste de integração é feito com instância de laboratório e entidades sintéticas antes de
+  uso residencial.
+
+Fases sugeridas
+
+1. Investigar versão suportada da API Home Assistant e escolher REST ou WebSocket com base em
+   paginação, histórico e eventos.
+2. Implementar conector somente leitura e tela de configuração/diagnóstico.
+3. Criar catálogo local leve e consulta seletiva por área/domínio.
+4. Adicionar histórico delimitado, timestamps e indicação de dado obsoleto.
+5. Avaliar orçamento de tokens, latência e precisão com cenários sintéticos que contenham muitas
+   entidades.
+6. Só discutir automação de dispositivos após revisão de permissões e confirmação por ação.
+
+Não faz parte desta proposta
+
+- Não é integração já disponível no Vladmir.
+- Não implica acesso irrestrito à rede local nem descoberta de dispositivos.
+- Não envia todo o estado da casa ao modelo em cada conversa.
+- Não habilita controle da casa na primeira versão.
+- Não promete compatibilidade com toda instalação, add-on, integração ou entidade do Home
+  Assistant.

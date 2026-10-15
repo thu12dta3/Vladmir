@@ -11,6 +11,7 @@ This documentation describes the source published in Vladmir. The presence of a 
 | Limitations and improvement plan | [MD](LIMITATIONS_AND_IMPROVEMENTS.md) | [TXT](LIMITATIONS_AND_IMPROVEMENTS.txt) | [PDF](pdf/LIMITATIONS_AND_IMPROVEMENTS.pdf) | [Português](../LIMITACOES_E_MELHORIAS.md) |
 | Sanitized incidents and evidence | [MD](SANITIZED_INCIDENTS_AND_EVIDENCE.md) | [TXT](SANITIZED_INCIDENTS_AND_EVIDENCE.txt) | [PDF](pdf/SANITIZED_INCIDENTS_AND_EVIDENCE.pdf) | [Português](../INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md) |
 | Device trust model | [MD](DEVICE_TRUST_MODEL.md) | [TXT](DEVICE_TRUST_MODEL.txt) | [PDF](pdf/DEVICE_TRUST_MODEL.pdf) | [Português](../MODELO_DE_CONFIANCA_DISPOSITIVOS.md) |
+| Pending Home Assistant integration | [MD](HOME_ASSISTANT_INTEGRATION_PENDING.md) | [TXT](HOME_ASSISTANT_INTEGRATION_PENDING.txt) | [PDF](pdf/HOME_ASSISTANT_INTEGRATION_PENDING.pdf) | [Português](../INTEGRACAO_HOME_ASSISTANT_PENDENTE.md) |
 
 ## How to interpret the documents
 

@@ -27,6 +27,7 @@
 | P2 | Treino | QLoRA depende de contrato, dataset aprovado, holdout, GPU e medição. Não altera modelo ativo. | Pode não iniciar sem pré-requisitos; resultado não garante inteligência geral. | Assistente de pré-voo, relatório de espaço/VRAM/energia, pausa/checkpoint e avaliação contra baseline; proibir promoção sem revisão. |
 | P2 | Email | O recurso monta `mailto:` e abre um rascunho; não envia por SMTP/API diretamente. | A mensagem pode não abrir se app padrão estiver ausente; envio é manual. | Rotular como “Preparar rascunho”; se houver integração de envio futura, implementar OAuth/API oficial, cofre de segredo, tela de confirmação e registro local mínimo. |
 | P2 | Agenda | Persistência em SQLite local, sem sincronização externa. | Lembretes não acompanham automaticamente outros calendários/dispositivos. | Exportação/importação ICS e integração OAuth opcional, com conflitos e fuso horário visíveis. |
+| P2 | Home Assistant | Não há conector; o contexto não consulta estados da casa. | Com muitos sensores, enviar inventário completo desperdiçaria contexto e ainda poderia usar dados antigos. | Planejar integração local somente leitura, seletiva por cômodo/domínio e sob demanda; resumir estados e consultar histórico delimitado com timestamps. Segredos em cofre local, endpoints allowlisted e nenhum controle de dispositivos na primeira versão. Ver [proposta pendente](INTEGRACAO_HOME_ASSISTANT_PENDENTE.md). |
 | P2 | Plugins | Integrações são nativas; não existe marketplace genérico de plugins externos. | Não é possível instalar plugins como na loja do ChatGPT. | Definir API versionada, permissões por capacidade, sandbox, assinatura e desinstalação antes de criar marketplace. |
 | P2 | JetBrains MCP | Depende do servidor local e de compatibilidade da IDE. A execução pode ler/modificar projeto conforme a ferramenta. | Conexão/lista de ferramentas pode falhar; ferramenta pode ter efeitos no workspace. | Mostrar schemas e plano antes da chamada, limites de timeout/saída, restrição por workspace e log de consentimento. |
 | P2 | GitHub | Ações dependem de `gh`, rede, permissões e branch escolhidos; edição tem limites por arquivo. | Um repositório fora do escopo da conta não abre; mudanças remotas exigem cuidado. | Pré-visualizar diff, confirmar repo/branch/caminho e SHA, proteger contra conflito e oferecer backup/rollback. |
@@ -80,6 +81,15 @@
 - Exigir baseline/holdout, métricas de qualidade, latência, VRAM e energia.
 - Interromper se segurança, qualidade ou limites de recursos piorarem.
 - Preservar aprovação explícita para alterar runtime, instalar timer, treinar ou publicar.
+
+### Fase F — contexto da casa
+
+- Implementar primeiro um conector Home Assistant local, opt-in e somente leitura.
+- Consultar por cômodo/domínio conforme a pergunta, sem anexar todos os estados ao prompt.
+- Resumir apenas entidades relevantes, com timestamp, estado indisponível/antigo e limites de tokens.
+- Tratar nomes/atributos de entidades como dados não confiáveis e manter o token fora de logs/prompts.
+- Cobrir falhas, payloads grandes e tentativa de destino não autorizado com testes sintéticos.
+- Considerar ações de controle somente numa fase posterior, com escopos por ação e confirmação explícita.
 
 ## Como reportar um defeito
 

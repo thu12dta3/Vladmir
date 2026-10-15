@@ -20,6 +20,7 @@ Vladmir é composto por um cliente Qt para Linux, um backend Python que usa Olla
 | Plugins | Integrações nativas | Sem marketplace genérico de extensões |
 | JetBrains MCP | Cliente local experimental | Servidor da IDE precisa ser iniciado e compatível |
 | Agenda e lembretes | Implementados localmente | Sem sincronização de calendário externo |
+| Home Assistant | Não implementado | Sem conector; proposta somente leitura pendente |
 | Email | Preparação de rascunho | Envio final ocorre no cliente de email |
 | Sentinel | Varredura local integrada | ClamAV/assinaturas; cobertura limitada ao caminho selecionado |
 | Instalação de software | Solicitação limitada e confirmada | Pacotes/gerenciadores permitidos; backup é inventário |

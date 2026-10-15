@@ -20,6 +20,7 @@ Vladmir consists of a Linux Qt client, a Python backend using local Ollama, loca
 | Plugins | Native integrations | No generic extension marketplace |
 | JetBrains MCP | Experimental local client | IDE server must be running and compatible |
 | Agenda and reminders | Implemented locally | No external calendar sync |
+| Home Assistant | Not implemented | No connector; read-only proposal is pending |
 | Email | Draft preparation | Final sending occurs in the email client |
 | Sentinel | Integrated local scan | ClamAV/signatures; limited to selected path |
 | Software installation | Limited and confirmed request | Allowed package managers/sources; backup is an inventory |

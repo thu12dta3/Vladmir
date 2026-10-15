@@ -27,6 +27,7 @@
 | P2 | Training | QLoRA requires a contract, approved dataset, holdout, GPU, and measurements. It does not alter the active model. | It may not start without prerequisites; results do not guarantee general intelligence. | Add preflight checks and storage/VRAM/energy report, pause/checkpoint, and baseline evaluation; prohibit promotion without review. |
 | P2 | Email | The feature builds a `mailto:` draft; it does not send directly through SMTP/API. | The message may not open if no default mail app exists; sending is manual. | Label it “Prepare draft”; any future send integration should use official OAuth/API, a secret store, confirmation, and minimal local records. |
 | P2 | Agenda | Local SQLite with no external sync. | Reminders do not automatically follow external calendars/devices. | Add ICS import/export and optional OAuth integration, with conflicts and time zones visible. |
+| P2 | Home Assistant | No connector exists; conversation context does not query home states. | Sending a full inventory would waste context with many sensors and could still use stale readings. | Plan an opt-in, local, read-only integration queried on demand by room/domain; summarize relevant states and bounded history with timestamps. Store secrets locally, allowlist endpoints, and keep device control out of the first release. See the [pending proposal](HOME_ASSISTANT_INTEGRATION_PENDING.md). |
 | P2 | Plugins | Integrations are native; there is no generic third-party plugin marketplace. | Users cannot install plugins as in ChatGPT's store. | Define versioned API, capability permissions, sandbox, signing, and uninstall before building a marketplace. |
 | P2 | JetBrains MCP | Depends on local server and IDE compatibility. Tools may read/modify a project. | Connection/tool listing may fail; tools may affect the workspace. | Show schemas and plan before invocation, limit timeout/output, restrict workspace, and log consent. |
 | P2 | GitHub | Actions depend on `gh`, network, permissions, and selected branch; editing has per-file limits. | A repository outside account scope cannot be opened; remote changes need care. | Preview diff, confirm repository/branch/path/SHA, protect against conflicts, and offer backup/rollback. |
@@ -80,6 +81,15 @@
 - Require baseline/holdout and quality, latency, VRAM, and energy metrics.
 - Stop if safety, quality, or resource limits regress.
 - Keep explicit approval for runtime changes, timer installation, training, and publication.
+
+### Phase F — home context
+
+- First implement an opt-in, local, read-only Home Assistant connector.
+- Query by room/domain as needed instead of adding every state to the prompt.
+- Summarize only relevant entities, with timestamps, unavailable/stale status, and token limits.
+- Treat entity names/attributes as untrusted data and keep tokens out of prompts/logs.
+- Cover failures, oversized payloads, and disallowed destinations with synthetic tests.
+- Consider control actions only in a later phase, with per-action scopes and explicit confirmation.
 
 ## Reporting a defect
 
