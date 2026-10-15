@@ -120,6 +120,14 @@ Os limites de app não substituem atualização do sistema, antivírus completo,
 6. Para câmera/áudio/Bluetooth, faça teste físico e verifique estado do dispositivo.
 7. Anote sucesso, erro, latência, dependências e escopo do teste.
 
-## Referências do código
+## 13. Estrutura, testes e automação de integração
+
+O repositório tem diretórios de código-fonte (`src/mark/`), testes (`tests/`), scripts de operação (`scripts/`) e projetos Android/Wear separados. Há 37 arquivos com padrão `tests/test_*.py`, usando `unittest`, além de scripts de teste unitário e smoke de integração. A suíte automatizada existe, mas seu número de arquivos não é uma métrica de cobertura.
+
+No commit `d9b3358`, não havia arquivos de workflow em `.github/workflows/`, nem configuração/relatório publicado de coverage. Portanto, o estado correto é “testes presentes; CI e percentual de cobertura ainda não publicados”, e não “sem testes” ou “cobertura zero”. O smoke de integração depende de Ollama, modelos e recursos locais; uma execução de unidade não demonstra que a integração completa ou hardware está funcionando.
+
+O README traz o comando da suíte local. Esta documentação não declara que os testes foram executados durante a inspeção.
+
+## 14. Referências do código
 
 `src/mark/desktop.py`, `src/mark/brain*.py`, `src/mark/core/`, `src/mark/cognition/`, `src/mark/mobile_api.py`, `src/mark/attachment_limits.py`, `src/mark/plugins.py`, `src/mark/github.py`, `src/mark/jetbrains_mcp.py`, `src/mark/package_install.py`, `src/mark/sentinel.py`, `src/mark/vision*.py`, `src/mark/audio.py`, `src/mark/tts.py`, `src/mark/agenda.py`, `src/mark/evolution/`, `mobile-android/`, `vladmir-companion/`, `vladmir-wear/`.

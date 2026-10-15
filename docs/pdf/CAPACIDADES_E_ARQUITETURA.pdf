@@ -589,7 +589,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
 endobj
 11 0 obj
-<< /Length 3126 >>
+<< /Length 4764 >>
 stream
 BT
 /F1 8.4 Tf
@@ -667,26 +667,74 @@ BT
 /F1 8.4 Tf
 1 0 0 1 48 502 Tm
 () Tj
-/F2 10.5 Tf
-1 0 0 1 48 490 Tm
-(Refer\352ncias do c\363digo) Tj
 /F1 8.4 Tf
-1 0 0 1 48 475 Tm
+1 0 0 1 48 490 Tm
+(13. Estrutura, testes e automa\347\343o de integra\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 478 Tm
 () Tj
 /F1 8.4 Tf
-1 0 0 1 48 463 Tm
+1 0 0 1 48 466 Tm
+(O reposit\363rio tem diret\363rios de c\363digo-fonte \(src/mark/\), testes \(tests/\), scripts de opera\347\343o) Tj
+/F1 8.4 Tf
+1 0 0 1 48 454 Tm
+(\(scripts/\) e projetos Android/Wear separados. H\341 37 arquivos com padr\343o tests/test_*.py, usando) Tj
+/F1 8.4 Tf
+1 0 0 1 48 442 Tm
+(unittest, al\351m de scripts de teste unit\341rio e smoke de integra\347\343o. A su\355te automatizada existe, mas) Tj
+/F1 8.4 Tf
+1 0 0 1 48 430 Tm
+(seu n\372mero de arquivos n\343o \351 uma m\351trica de cobertura.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 418 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 406 Tm
+(No commit d9b3358, n\343o havia arquivos de workflow em .github/workflows/, nem configura\347\343o/relat\363rio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 394 Tm
+(publicado de coverage. Portanto, o estado correto \351 \223testes presentes; CI e percentual de cobertura) Tj
+/F1 8.4 Tf
+1 0 0 1 48 382 Tm
+(ainda n\343o publicados\224, e n\343o \223sem testes\224 ou \223cobertura zero\224. O smoke de integra\347\343o depende de) Tj
+/F1 8.4 Tf
+1 0 0 1 48 370 Tm
+(Ollama, modelos e recursos locais; uma execu\347\343o de unidade n\343o demonstra que a integra\347\343o completa) Tj
+/F1 8.4 Tf
+1 0 0 1 48 358 Tm
+(ou hardware est\341 funcionando.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 346 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 334 Tm
+(O README traz o comando da su\355te local. Esta documenta\347\343o n\343o declara que os testes foram executados) Tj
+/F1 8.4 Tf
+1 0 0 1 48 322 Tm
+(durante a inspe\347\343o.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 310 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 298 Tm
+(14. Refer\352ncias do c\363digo) Tj
+/F1 8.4 Tf
+1 0 0 1 48 286 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 274 Tm
 (src/mark/desktop.py, src/mark/brain*.py, src/mark/core/, src/mark/cognition/,) Tj
 /F1 8.4 Tf
-1 0 0 1 48 451 Tm
+1 0 0 1 48 262 Tm
 (src/mark/mobile_api.py, src/mark/attachment_limits.py, src/mark/plugins.py, src/mark/github.py,) Tj
 /F1 8.4 Tf
-1 0 0 1 48 439 Tm
+1 0 0 1 48 250 Tm
 (src/mark/jetbrains_mcp.py, src/mark/package_install.py, src/mark/sentinel.py, src/mark/vision*.py,) Tj
 /F1 8.4 Tf
-1 0 0 1 48 427 Tm
+1 0 0 1 48 238 Tm
 (src/mark/audio.py, src/mark/tts.py, src/mark/agenda.py, src/mark/evolution/, mobile-android/,) Tj
 /F1 8.4 Tf
-1 0 0 1 48 415 Tm
+1 0 0 1 48 226 Tm
 (vladmir-companion/, vladmir-wear/.) Tj
 /F1 8 Tf
 1 0 0 1 48 28 Tm
@@ -711,9 +759,9 @@ xref
 0000012244 00000 n 
 0000018386 00000 n 
 0000018523 00000 n 
-0000021702 00000 n 
+0000023340 00000 n 
 trailer
 << /Size 13 /Root 1 0 R >>
 startxref
-21840
+23478
 %%EOF

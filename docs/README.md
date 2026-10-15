@@ -18,3 +18,7 @@ Este conjunto descreve o estado do código-fonte publicado no Vladmir. A presen�
 - **Pendente**: a implementação atual não oferece o comportamento prometido ou depende de uma integração que ainda não existe.
 
 Os documentos foram preparados por inspeção estática do repositório `main` em 14 de outubro de 2026. Isso não substitui execução no computador ou teste físico dos dispositivos. Para requisitos, instalação e segurança, também consulte [README.md](../README.md), [config/README.md](../config/README.md), [SECURITY.md](../SECURITY.md), `mobile-android/README.md` e os avisos de terceiros.
+
+O código Python está em `src/mark/` e há suíte `unittest` em `tests/`; o projeto ainda não publica workflow de CI nem percentual de cobertura. A documentação de contribuição e governança está em [CONTRIBUTING.md](../CONTRIBUTING.md) e [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md). A estrutura e esses fatos foram conferidos no commit `d9b3358` antes desta atualização.
+
+Ainda não há workflow GitHub Actions; não há badge de build porque não existe execução de CI para reportar. Os arquivos de issue/PR ajudam a coletar relatos, mas não significam que há equipe de suporte ou SLA estabelecido.

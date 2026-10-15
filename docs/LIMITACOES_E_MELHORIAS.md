@@ -85,6 +85,17 @@
 
 Inclua: commit/versão, sistema e versão do app, recurso, pré-requisitos, passos mínimos, esperado, observado, log sanitizado e frequência de reprodução. Remova antes tokens, emails pessoais, caminhos de usuário, URL de câmera, endereço IP, imagens privadas e conteúdo de conversa. Vulnerabilidades devem seguir o canal privado de `SECURITY.md`.
 
+## Fatos do repositório que não devem ser confundidos com lacunas
+
+- O projeto **tem** diretórios organizados `src/`, `tests/`, `scripts/` e módulos Android/Wear; logo, a afirmação de que não existe estrutura de código/testes é incorreta.
+- Há 37 arquivos `tests/test_*.py` com testes `unittest`, mais scripts para suíte unitária e integração. Isso não fornece, por si só, um percentual de cobertura.
+- A falta real é a ausência de workflow GitHub Actions/CI e de uma medição de coverage publicada. Sem execução, não se deve afirmar que a suíte passa ou que a cobertura é zero.
+- O README já tem instalação rápida e requisitos; esta documentação acrescenta uso detalhado e exemplos. Ainda pode melhorar com screenshots e vídeos de fluxos reais.
+- O título, pacote e URL usam consistentemente o nome “Vladmir”. O texto recebido não demonstra que seja erro: só o mantenedor pode dizer se o nome foi intencional ou se a marca desejada era “Vladimir”.
+- A licença MIT padrão é coerente com o objetivo de publicar Vladmir como open source; “genérica” não é defeito técnico. A licença inclui o texto legal completo e o README explica o que ela permite. Componentes de terceiros mantêm avisos próprios.
+- Ausência de arquivo de governança era real e foi corrigida nesta revisão com guia de contribuição, código de conduta e modelos para issue/PR.
+- A alegação sobre marketing em Reddit não pode ser confirmada pelos arquivos do repositório e não é evidência de estado técnico.
+
 ## Critério de conclusão recomendado
 
 Marque uma correção como concluída apenas quando houver evidência no mesmo nível do problema: leitura estática comprova fluxo no código; teste de unidade valida função isolada; integração valida serviços reais; ensaio físico valida câmera, áudio, Bluetooth ou sensores. Informe limites do ensaio e não transforme mock/fixture em prova de funcionamento do dispositivo.

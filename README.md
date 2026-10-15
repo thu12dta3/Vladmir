@@ -44,6 +44,18 @@ O código-fonte dos aplicativos está em mobile-android/, vladmir-companion/ e v
 
 Os guias de uso, capacidades/arquitetura e limitações/roteiro de melhorias estão em [docs/](docs/README.md). Cada guia está disponível em Markdown, texto simples e PDF A4 preto e branco. A documentação descreve o código-fonte e diferencia recursos configuráveis, experimentais e dependentes de validação no dispositivo.
 
+## Desenvolvimento
+
+O código Python fica em `src/mark/`, os testes automatizados existentes ficam em `tests/`, os utilitários de execução e verificação em `scripts/` e os clientes Android/Wear em `mobile-android/`, `vladmir-companion/` e `vladmir-wear/`. A suíte Python usa `unittest` e pode ser executada com:
+
+```bash
+VLADMIR_PYTHON="$HOME/.local/share/vladmir/core-env/bin/python" scripts/test_unit.sh
+```
+
+O smoke test de integração exige Ollama ativo e modelos/áudio configurados; consulte `scripts/test_integration.sh`. No estado deste commit, o repositório **ainda não tem GitHub Actions/CI configurado nem cobertura publicada**. A existência da suíte não significa que ela tenha sido executada neste commit, e não há medição de cobertura para afirmar um percentual.
+
+Para contribuir, leia [CONTRIBUTING.md](CONTRIBUTING.md) e [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Modelos para defeitos, ideias e pull requests ficam em `.github/ISSUE_TEMPLATE/` e `.github/PULL_REQUEST_TEMPLATE.md`.
+
 ## Privacidade e segurança
 
 - Endereços de câmera, tokens, senhas, chaves e URLs privadas ficam em configuração local ignorada pelo Git.

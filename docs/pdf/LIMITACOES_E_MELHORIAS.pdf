@@ -4,7 +4,7 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
 endobj
 3 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -195,7 +195,7 @@ BT
 (expl\355citas. |) Tj
 /F1 8 Tf
 1 0 0 1 48 28 Tm
-(Vladmir | 1/3) Tj
+(Vladmir | 1/4) Tj
 ET
 endstream
 endobj
@@ -391,7 +391,7 @@ BT
 () Tj
 /F1 8 Tf
 1 0 0 1 48 28 Tm
-(Vladmir | 2/3) Tj
+(Vladmir | 2/4) Tj
 ET
 endstream
 endobj
@@ -399,7 +399,7 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
 endobj
 9 0 obj
-<< /Length 4665 >>
+<< /Length 6073 >>
 stream
 BT
 /F1 8.4 Tf
@@ -527,49 +527,127 @@ BT
 () Tj
 /F1 8.4 Tf
 1 0 0 1 48 295 Tm
-(Crit\351rio de conclus\343o recomendado) Tj
+(Fatos do reposit\363rio que n\343o devem ser confundidos com lacunas) Tj
 /F1 8.4 Tf
 1 0 0 1 48 283 Tm
 () Tj
-/F2 10.5 Tf
+/F1 8.4 Tf
 1 0 0 1 48 271 Tm
-(Marque uma corre\347\343o como conclu\355da apenas quando houver evid\352ncia no mesmo n\355vel do) Tj
-/F2 10.5 Tf
-1 0 0 1 48 256 Tm
-(problema:) Tj
+(* O projeto tem diret\363rios organizados src/, tests/, scripts/ e m\363dulos Android/Wear; logo, a) Tj
 /F1 8.4 Tf
-1 0 0 1 48 241 Tm
-(leitura est\341tica comprova fluxo no c\363digo; teste de unidade valida fun\347\343o isolada; integra\347\343o valida) Tj
+1 0 0 1 48 259 Tm
+(afirma\347\343o de que n\343o existe estrutura de c\363digo/testes \351 incorreta.) Tj
 /F1 8.4 Tf
-1 0 0 1 48 229 Tm
-(servi\347os reais; ensaio f\355sico valida c\342mera, \341udio, Bluetooth ou sensores. Informe limites do ensaio) Tj
+1 0 0 1 48 247 Tm
+(* H\341 37 arquivos tests/test_*.py com testes unittest, mais scripts para su\355te unit\341ria e integra\347\343o.) Tj
 /F1 8.4 Tf
-1 0 0 1 48 217 Tm
-(e n\343o transforme mock/fixture em prova de funcionamento do dispositivo.) Tj
+1 0 0 1 48 235 Tm
+(Isso n\343o fornece, por si s\363, um percentual de cobertura.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 223 Tm
+(* A falta real \351 a aus\352ncia de workflow GitHub Actions/CI e de uma medi\347\343o de coverage publicada.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 211 Tm
+(Sem execu\347\343o, n\343o se deve afirmar que a su\355te passa ou que a cobertura \351 zero.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 199 Tm
+(* O README j\341 tem instala\347\343o r\341pida e requisitos; esta documenta\347\343o acrescenta uso detalhado e) Tj
+/F1 8.4 Tf
+1 0 0 1 48 187 Tm
+(exemplos. Ainda pode melhorar com screenshots e v\355deos de fluxos reais.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 175 Tm
+(* O t\355tulo, pacote e URL usam consistentemente o nome \223Vladmir\224. O texto recebido n\343o demonstra que) Tj
+/F1 8.4 Tf
+1 0 0 1 48 163 Tm
+(seja erro: s\363 o mantenedor pode dizer se o nome foi intencional ou se a marca desejada era) Tj
+/F1 8.4 Tf
+1 0 0 1 48 151 Tm
+(\223Vladimir\224.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 139 Tm
+(* A licen\347a MIT padr\343o \351 coerente com o objetivo de publicar Vladmir como open source; \223gen\351rica\224) Tj
+/F1 8.4 Tf
+1 0 0 1 48 127 Tm
+(n\343o \351 defeito t\351cnico. A licen\347a inclui o texto legal completo e o README explica o que ela permite.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 115 Tm
+(Componentes de terceiros mant\352m avisos pr\363prios.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 103 Tm
+(* Aus\352ncia de arquivo de governan\347a era real e foi corrigida nesta revis\343o com guia de contribui\347\343o,) Tj
+/F1 8.4 Tf
+1 0 0 1 48 91 Tm
+(c\363digo de conduta e modelos para issue/PR.) Tj
 /F1 8 Tf
 1 0 0 1 48 28 Tm
-(Vladmir | 3/3) Tj
+(Vladmir | 3/4) Tj
 ET
 endstream
 endobj
 10 0 obj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
 endobj
+11 0 obj
+<< /Length 1004 >>
+stream
+BT
+/F1 8.4 Tf
+1 0 0 1 48 790 Tm
+(* A alega\347\343o sobre marketing em Reddit n\343o pode ser confirmada pelos arquivos do reposit\363rio e n\343o \351) Tj
+/F1 8.4 Tf
+1 0 0 1 48 778 Tm
+(evid\352ncia de estado t\351cnico.) Tj
+/F1 8.4 Tf
+1 0 0 1 48 766 Tm
+() Tj
+/F1 8.4 Tf
+1 0 0 1 48 754 Tm
+(Crit\351rio de conclus\343o recomendado) Tj
+/F1 8.4 Tf
+1 0 0 1 48 742 Tm
+() Tj
+/F2 10.5 Tf
+1 0 0 1 48 730 Tm
+(Marque uma corre\347\343o como conclu\355da apenas quando houver evid\352ncia no mesmo n\355vel do) Tj
+/F2 10.5 Tf
+1 0 0 1 48 715 Tm
+(problema:) Tj
+/F1 8.4 Tf
+1 0 0 1 48 700 Tm
+(leitura est\341tica comprova fluxo no c\363digo; teste de unidade valida fun\347\343o isolada; integra\347\343o valida) Tj
+/F1 8.4 Tf
+1 0 0 1 48 688 Tm
+(servi\347os reais; ensaio f\355sico valida c\342mera, \341udio, Bluetooth ou sensores. Informe limites do ensaio) Tj
+/F1 8.4 Tf
+1 0 0 1 48 676 Tm
+(e n\343o transforme mock/fixture em prova de funcionamento do dispositivo.) Tj
+/F1 8 Tf
+1 0 0 1 48 28 Tm
+(Vladmir | 4/4) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
 xref
-0 11
+0 13
 0000000000 65535 f 
 0000000015 00000 n 
 0000000064 00000 n 
-0000000134 00000 n 
-0000000231 00000 n 
-0000000333 00000 n 
-0000007142 00000 n 
-0000007278 00000 n 
-0000014200 00000 n 
-0000014336 00000 n 
-0000019053 00000 n 
+0000000141 00000 n 
+0000000238 00000 n 
+0000000340 00000 n 
+0000007149 00000 n 
+0000007285 00000 n 
+0000014207 00000 n 
+0000014343 00000 n 
+0000020468 00000 n 
+0000020605 00000 n 
+0000021662 00000 n 
 trailer
-<< /Size 11 /Root 1 0 R >>
+<< /Size 13 /Root 1 0 R >>
 startxref
-19190
+21800
 %%EOF
