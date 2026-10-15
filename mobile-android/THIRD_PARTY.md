@@ -1,6 +1,6 @@
 # Componentes de terceiros no aplicativo Android
 
-O código do Vladmir continua sob a licença proprietária do repositório. As bibliotecas incluídas mantêm suas próprias licenças.
+O código original do Vladmir é distribuído sob a licença MIT, conforme o arquivo LICENSE na raiz do repositório. As bibliotecas incluídas mantêm suas próprias licenças.
 
 - [ZXing Android Embedded](https://github.com/journeyapps/zxing-android-embedded), versão 4.3.0: Apache License 2.0. Leitura do QR de pareamento.
 - [ZXing Core](https://github.com/zxing/zxing): Apache License 2.0, dependência transitiva do leitor QR.

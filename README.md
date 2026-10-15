@@ -50,4 +50,4 @@ O código-fonte dos aplicativos está em mobile-android/, vladmir-companion/ e v
 
 ## Licença
 
-O código do Vladmir é proprietário e todos os direitos são reservados, conforme LICENSE. Bibliotecas de terceiros mantêm suas próprias licenças; consulte os avisos em mobile-android/THIRD_PARTY.md e tools/qwen-code-agent/vendor/.
+O código do Vladmir é distribuído sob a licença MIT; consulte LICENSE para os termos completos. Isso permite usar, modificar e redistribuir o projeto, inclusive em produtos comerciais, desde que o aviso de copyright e a licença acompanhem cópias substanciais. Componentes de terceiros mantêm suas próprias licenças; consulte mobile-android/THIRD_PARTY.md e tools/qwen-code-agent/vendor/.
