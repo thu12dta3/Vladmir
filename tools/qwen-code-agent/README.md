@@ -1,5 +1,7 @@
 # Qwen Code Agent
 
+Languages: [Português](README.md) · [English](README.en.md)
+
 Agente local de programação para o LM Studio. Usa o modelo já instalado `qwen2.5-coder-7b-instruct` pela API local `http://127.0.0.1:1234/v1`; não instala nem baixa modelos.
 
 ## Arquivos

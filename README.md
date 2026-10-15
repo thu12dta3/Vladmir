@@ -1,5 +1,7 @@
 # Vladmir
 
+Idiomas: [Português](README.md) · [English](README.en.md)
+
 Vladmir é um assistente pessoal local com chat para desktop, voz, memória compartilhada, ferramentas, visão, agenda, integração opcional com celular e relógio, pesquisa web e fluxos de programação. É um projeto independente mantido separadamente.
 
 Contato: thu12dta3@tutamail.com
@@ -43,6 +45,8 @@ O código-fonte dos aplicativos está em mobile-android/, vladmir-companion/ e v
 ## Documentação detalhada
 
 Os guias de uso, capacidades/arquitetura e limitações/roteiro de melhorias estão em [docs/](docs/README.md). Cada guia está disponível em Markdown, texto simples e PDF A4 preto e branco. A documentação descreve o código-fonte e diferencia recursos configuráveis, experimentais e dependentes de validação no dispositivo.
+
+A documentação em inglês está disponível em [docs/en/](docs/en/README.md). A interface do aplicativo permanece principalmente em português nesta versão; esta tradução cobre a documentação do repositório.
 
 O apêndice de [incidentes e evidências sanitizados](docs/INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md) apresenta exemplos históricos de testes e falhas do projeto relacionado MARK. Ele não é uma certificação independente do Vladmir; consulte as ressalvas de proveniência e escopo no próprio documento.
 

@@ -1,0 +1,53 @@
+name: Report a bug (English)
+description: Report a reproducible problem in Vladmir.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Do not include passwords, tokens, private addresses, conversation content, or personal files.
+        For vulnerabilities, use the private process described in SECURITY.en.md.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Provide the Vladmir version or commit hash.
+      placeholder: short hash or version
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: System and device
+      placeholder: Linux distribution, Android version, or relevant device model
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the shortest sanitized steps.
+      placeholder: 1. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed result
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message or sanitized log
+      description: Remove tokens, addresses, personal names, and private content.
+    validations:
+      required: false

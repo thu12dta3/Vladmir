@@ -1,0 +1,114 @@
+# Development incidents and evidence — sanitized version
+
+This appendix collects real examples of investigation and validation recorded during development related to MARK. It supplements Vladmir's public presentation with observed failures, fixes, and limitations, without publishing raw records.
+
+## Provenance and limitations
+
+- These accounts derive from internal reports for MARK, a related but separate project from the public Vladmir repository.
+- The results below **do not certify current Vladmir**, prove that every component has identical code, or replace reproducible validation in the public repository.
+- Original records contain logs and local information. No logs, configuration, credentials, original images, or dumps were copied into this document.
+- Usernames, emails, network addresses, private domains, Bluetooth names, serial numbers, personal paths, keys, tokens, and session/device identifiers were omitted.
+- No Recovery screenshot was republished because it contained device details and context. Evidence is described in aggregate text.
+
+## Case 1 — adversarial review of the mobile API
+
+**Period:** September 30, 2026. **Target:** a MARK Mobile test version and local copy of MARK API. **Type:** APK/code inspection and local lab requests.
+
+### What happened
+
+The review found concrete issues in history authorization, request-validation order, malformed-field handling, and response read limits. In one historical case, a legacy authenticated client could still read history after a blocking option was enabled. In another, the server began waiting for a large request body before denying an identity without a valid session. These results belong to the version evaluated in that campaign; credentials and sentinel content are not published.
+
+### Recorded fixes and evidence
+
+- The block check was also applied to legacy clients and before returning an in-progress response; the corrected regression case denied history.
+- Identity was checked before reading the body. The no-session scenario received an immediate rejection in the local test.
+- Invalid types, non-ASCII authentication characters, and ambiguous header framing began returning controlled errors.
+- Response reads and user-selected PDFs gained limits based on actual byte size.
+- That campaign report recorded **165 passing Python tests** (150 existing and 15 adversarial scenarios) and more than **950 requests** across mutation, replay, pairing, and session-rotation scenarios.
+
+### What was not demonstrated
+
+The phone was not connected during the security test. Some TLS cases used a Kotlin class compiled on a JVM with lab certificates; this is not a MITM attack against an installed app. There was no physical OOM test, full dependency review, or complete APK audit. The original report retained status **SECURITY INCOMPLETE**.
+
+**Internal source:** MARK Mobile/API red-team report dated September 30, 2026. Raw artifacts remained private.
+
+## Case 2 — recovery after removing a watch system dependency
+
+**Period:** October 10, 2026. **Target:** Wear OS app and manufacturer system services on a test watch. **Type:** owner-provided photo, system logs captured during a USB window, and later observation.
+
+### What happened
+
+After an OEM health package was removed during a requested cleanup, a persistent watch service repeatedly failed because it could not find a step provider supplied by that package. The owner observed Android Recovery with a message that the system could not load. The connection between the crash loop and Recovery was a hypothesis supported by logs and Android behavior, not a perfect reconstruction of the full boot history.
+
+### Recovery and observed result
+
+- The original OEM package was restored for the primary user; no factory reset, wipe, root, or partition change was performed.
+- In later samples, the service found the provider again and no further Java crashes from that service appeared in the observed buffer.
+- After a normal restart, the watch returned to its watch face. The longest recorded observation lasted approximately **53 minutes** in the same boot, with no new observed Java crash from the investigated service.
+
+### Limitations
+
+Native errors without an isolated cause and USB-window instability remained. The observation period does not certify long-term stability, GPS, sensors, intact settings, or absence of other defects. The practical conclusion was to preserve the OEM dependency until a proven alternative exists.
+
+**Internal source:** Companion/Wear recovery report dated October 10, 2026. Original photo and dumps were not republished.
+
+## Case 3 — mono music during calls
+
+**Period:** October 11, 2026. **Target:** audio routing on a Linux installation with a Bluetooth headset and an active call. **Type:** audio-server state inspection, local service configuration, and user confirmation.
+
+### Diagnosis and fix
+
+The listening service followed the default microphone input. When a separate microphone was unavailable, the system used the Bluetooth headset microphone and switched the connection to HFP/mSBC call profile, which produced mono playback on that device. The music player was also routed in mono.
+
+The machine-specific adjustment separated the microphone from the headset output, kept A2DP stereo as playback profile, and routed music at 48 kHz over two channels. The user confirmed normal music quality and stereo directional audio.
+
+### Limitations
+
+This was a local routing fix, not a universal Vladmir change. With that policy, a classic Bluetooth headset microphone is not used for the call; another microphone is required. Results may differ across PipeWire versions, Bluetooth profiles, and headsets.
+
+**Internal source:** MARK stereo-audio report dated October 11, 2026. Previous configuration and private backups were not copied.
+
+## Case 4 — camera and real-time visual recognition
+
+**Period:** October 11, 2026. **Target:** desktop USB camera capture and an already-installed local vision model. **Type:** physical capture, local inference, and a small known-image evaluation set.
+
+### Recorded evidence
+
+- A single **1280 × 720** frame was captured in about **1.02 s** in that setup.
+- In a physical stream sample, 195 frames arrived in approximately 20 seconds; this measures capture, not AI inference rate.
+- Four known test images passed author-defined visual tasks. In another comparison, four images passed with both the full scene and a crop; the crop did not show an accuracy gain and raised measured average latency from **1.52 s to 2.29 s**.
+- The MARK regression suite recorded **327 passing tests** in that stage, including image validation, concurrency, and shutdown scenarios.
+
+### Limitations
+
+The set was small, known, and not blind; it cannot establish general accuracy. Physical capture does not prove camera operation on other computers, in low light, or with RTSP sources. Test results belong to MARK and are not an independent Vladmir benchmark.
+
+**Internal source:** MARK live-vision and focus reports dated October 11, 2026. No real camera photo or private scene description was published.
+
+## Case 5 — model tuning without demonstrated improvement
+
+**Period:** October 11, 2026. **Target:** local QLoRA adapter experiment for an existing base model. **Type:** isolated training, response comparison, and aggregate report.
+
+### Result
+
+Two candidates each completed 14 updates using 56 training examples per round. The first lowered loss but regressed in qualitative responses and was rejected. The second approximately preserved initial responses without a clear gain. **No adapter was activated**; base models were retained.
+
+### Limitations
+
+The evaluation was small and not blind; camera, voice, AR, and broad model-weight security were not evaluated. This is evidence that the run did not justify replacing the models, not proof of general improvement or the absence of other training opportunities.
+
+**Internal source:** MARK experimental training report dated October 11, 2026. Weights, checkpoints, and dataset remain local and were not copied.
+
+## Mobile features that must not be advertised as complete
+
+An Android-app test report recorded that the app opened and the AR screen appeared on one device; physical plane detection, object placement, camera sharpness, and persistent mapping were not confirmed. AR did not save a map after leaving the session. Separately, Companion/Wear was observed as “offline when the phone was locked”; later versions kept a foreground service during a screen-off session, but temporary authorization expired and durable reconnection remained pending.
+
+These examples show why compiling an APK or opening a screen must not be described as proof of complete physical operation. Results are historical and should be checked again before making claims about the current version.
+
+## Turning these accounts into reproducible public evidence
+
+1. Create safe synthetic test cases in the public repository without importing MARK databases, tokens, dumps, or private configuration.
+2. Publish original commands and fixtures with clear licenses; document the exact version and code hash tested.
+3. Add CI to Vladmir and publish the actual run before adding badges or claiming a green pipeline.
+4. Repeat physical tests only with declared scope/device, without publishing serial numbers, accounts, IPs, or private content.
+5. Keep provenance explicit: MARK results are related development experience, not independent Vladmir certification.

@@ -12,6 +12,8 @@ Este conjunto descreve o estado do código-fonte publicado no Vladmir. A presen�
 | Incidentes e evidências sanitizados | [INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md](INCIDENTES_E_EVIDENCIAS_SANITIZADOS.md) | [INCIDENTES_E_EVIDENCIAS_SANITIZADOS.txt](INCIDENTES_E_EVIDENCIAS_SANITIZADOS.txt) | [INCIDENTES_E_EVIDENCIAS_SANITIZADOS.pdf](pdf/INCIDENTES_E_EVIDENCIAS_SANITIZADOS.pdf) |
 | Modelo de confiança entre dispositivos | [MODELO_DE_CONFIANCA_DISPOSITIVOS.md](MODELO_DE_CONFIANCA_DISPOSITIVOS.md) | [MODELO_DE_CONFIANCA_DISPOSITIVOS.txt](MODELO_DE_CONFIANCA_DISPOSITIVOS.txt) | [MODELO_DE_CONFIANCA_DISPOSITIVOS.pdf](pdf/MODELO_DE_CONFIANCA_DISPOSITIVOS.pdf) |
 
+English translations of the repository documentation are available in [docs/en/](en/README.md). The desktop and mobile app UI is not fully translated in this documentation update.
+
 ## Como interpretar
 
 - **Implementado no código**: há módulo, tela ou rota correspondente no repositório.

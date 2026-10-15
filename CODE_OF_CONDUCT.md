@@ -1,5 +1,7 @@
 # Código de conduta
 
+Idiomas: [Português](CODE_OF_CONDUCT.md) · [English](CODE_OF_CONDUCT.en.md)
+
 Esperamos que todas as pessoas participantes do Vladmir mantenham um ambiente respeitoso, inclusivo e focado no trabalho. Isso vale para issues, pull requests, revisões, documentação e comunicação relacionada ao projeto.
 
 ## Comportamento esperado

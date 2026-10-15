@@ -1,5 +1,7 @@
 # Configuração local
 
+Idiomas: [Português](README.md) · [English](README.en.md)
+
 Use `config.example.json` como referência para criar `~/.config/vladmir/config.json`. O arquivo ativo não deve ser adicionado ao Git; use permissões `0600`. Não coloque senhas em logs ou exemplos.
 
 Os dados ficam em `~/.local/share/vladmir` e `~/.local/state/vladmir`. `VLADMIR_CONFIG` aponta para outro arquivo de configuração. O Vladmir usa somente variáveis de ambiente com prefixo `VLADMIR_`; ele não lê configurações ou credenciais do MARK.

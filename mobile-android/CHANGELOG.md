@@ -1,5 +1,7 @@
 # Histórico público
 
+Idiomas: [Português](CHANGELOG.md) · [English](CHANGELOG.en.md)
+
 ## 1.0.0
 
 - Primeira publicação pública do Vladmir Mobile com identidade visual própria.

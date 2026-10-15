@@ -1,5 +1,7 @@
 # Vladmir Mobile
 
+Idiomas: [Português](README.md) · [English](README.en.md)
+
 Aplicativo Android nativo em Kotlin e Jetpack Compose. A interface móvel pode conversar com a API local do Vladmir; câmera, voz, AR e ponte com Wear OS são recursos opcionais.
 
 ## Compilar

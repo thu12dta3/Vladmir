@@ -1,5 +1,7 @@
 # Como contribuir
 
+Idiomas: [Português](CONTRIBUTING.md) · [English](CONTRIBUTING.en.md)
+
 Obrigado por considerar uma contribuição ao Vladmir. Este guia descreve o fluxo esperado para manter mudanças pequenas, revisáveis e seguras.
 
 ## Antes de começar

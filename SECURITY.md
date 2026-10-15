@@ -1,5 +1,7 @@
 # Segurança
 
+Idiomas: [Português](SECURITY.md) · [English](SECURITY.en.md)
+
 ## Configuração segura
 
 Nunca adicione chaves de API, senhas, tokens, arquivos de assinatura Android, URLs privadas de câmera ou endereços de rede pessoal ao Git. O arquivo local recomendado é `~/.config/vladmir/config.json`, com permissões `0600`.
